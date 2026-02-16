@@ -1,0 +1,3486 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------< com.freightfox:dispatch-load-balancer >----------------
+[INFO] Building Dispatch Load Balancer 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ dispatch-load-balancer ---
+[INFO] Copying 2 resources from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.0:compile (default-compile) @ dispatch-load-balancer ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ dispatch-load-balancer ---
+[INFO] skip non existing resourceDirectory C:\Coding\Java\freightfox\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (default-testCompile) @ dispatch-load-balancer ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- surefire:3.5.3:test (default-test) @ dispatch-load-balancer ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.freightfox.dispatch.controller.DispatchControllerTest
+17:27:15.267 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.freightfox.dispatch.controller.DispatchControllerTest]: DispatchControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:27:15.598 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.freightfox.dispatch.DispatchApplication for test class com.freightfox.dispatch.controller.DispatchControllerTest
+17:27:15.758 [main] INFO org.springframework.boot.devtools.restart.RestartApplicationListener -- Restart disabled due to context in which it is running
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.0)
+
+2026-02-16T17:27:16.596+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.d.controller.DispatchControllerTest  : Starting DispatchControllerTest using Java 21.0.10 with PID 5148 (started by INDIA TECHNOLOGY in C:\Coding\Java\freightfox)
+2026-02-16T17:27:16.599+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] c.f.d.controller.DispatchControllerTest  : Running with Spring Boot v3.5.0, Spring v6.2.7
+2026-02-16T17:27:16.601+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.d.controller.DispatchControllerTest  : No active profile set, falling back to 1 default profile: "default"
+Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (C:\Users\INDIA TECHNOLOGY\.m2\repository\net\bytebuddy\byte-buddy-agent\1.17.5\byte-buddy-agent-1.17.5.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2026-02-16T17:27:19.403+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.d.controller.DispatchController      : DispatchController initialized
+2026-02-16T17:27:20.367+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-02-16T17:27:20.367+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-02-16T17:27:20.372+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2026-02-16T17:27:20.425+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.d.controller.DispatchControllerTest  : Started DispatchControllerTest in 4.696 seconds (process running for 6.621)
+2026-02-16T17:27:21.043+05:30  WARN 5148 --- [dispatch-load-balancer] [           main] c.f.d.exception.GlobalExceptionHandler   : Validation failed: 1 errors
+2026-02-16T17:27:21.046+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] c.f.d.exception.GlobalExceptionHandler   : Validation error - Field: vehicles[0].capacity, Message: Capacity must be at least 1000 grams (1 kg)
+2026-02-16T17:27:21.290+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.d.controller.DispatchController      : POST /api/dispatch/orders - Received 2 orders
+2026-02-16T17:27:21.290+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] c.f.d.controller.DispatchController      : First order ID: ORD-001
+2026-02-16T17:27:21.297+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.d.controller.DispatchController      : Orders saved successfully: Successfully saved 2 orders (1 HIGH, 1 MEDIUM, 0 LOW priority)
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /dispatch/orders
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", Content-Length:"298"]
+             Body = {"orders":[{"orderId":"ORD-001","latitude":28.6139,"longitude":77.209,"address":"Connaught Place, New Delhi, India","packageWeight":5000,"priority":"HIGH"},{"orderId":"ORD-002","latitude":28.5355,"longitude":77.391,"address":"Sector 18, Noida, UP, India","packageWeight":3000,"priority":"MEDIUM"}]}
+    Session Attrs = {}
+
+Handler:
+             Type = com.freightfox.dispatch.controller.DispatchController
+           Method = com.freightfox.dispatch.controller.DispatchController#acceptOrders(OrderRequestDTO)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"success":true,"message":"Successfully saved 2 orders (1 HIGH, 1 MEDIUM, 0 LOW priority)","data":null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2026-02-16T17:27:21.339+05:30  WARN 5148 --- [dispatch-load-balancer] [           main] c.f.d.exception.GlobalExceptionHandler   : Validation failed: 1 errors
+2026-02-16T17:27:21.339+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] c.f.d.exception.GlobalExceptionHandler   : Validation error - Field: orders[0].latitude, Message: Latitude must be between -90 and 90 degrees
+2026-02-16T17:27:21.353+05:30  WARN 5148 --- [dispatch-load-balancer] [           main] c.f.d.exception.GlobalExceptionHandler   : Validation failed: 1 errors
+2026-02-16T17:27:21.353+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] c.f.d.exception.GlobalExceptionHandler   : Validation error - Field: orders[0].priority, Message: Priority must be HIGH, MEDIUM, or LOW
+2026-02-16T17:27:21.370+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.d.controller.DispatchController      : POST /api/dispatch/vehicles - Received 2 vehicles
+2026-02-16T17:27:21.370+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] c.f.d.controller.DispatchController      : First vehicle ID: VEH-001
+2026-02-16T17:27:21.370+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.d.controller.DispatchController      : Vehicles saved successfully: Successfully saved 2 vehicles (Total capacity: 25000 grams)
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /dispatch/vehicles
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", Content-Length:"284"]
+             Body = {"vehicles":[{"vehicleId":"VEH-001","capacity":10000,"currentLatitude":28.6139,"currentLongitude":77.209,"currentAddress":"Delhi Hub, Central Delhi"},{"vehicleId":"VEH-002","capacity":15000,"currentLatitude":28.5355,"currentLongitude":77.391,"currentAddress":"Noida Hub, Sector 18"}]}
+    Session Attrs = {}
+
+Handler:
+             Type = com.freightfox.dispatch.controller.DispatchController
+           Method = com.freightfox.dispatch.controller.DispatchController#acceptVehicles(VehicleRequestDTO)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"success":true,"message":"Successfully saved 2 vehicles (Total capacity: 25000 grams)","data":null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2026-02-16T17:27:21.393+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.d.controller.DispatchController      : GET /api/dispatch/plan - Generating dispatch plan
+2026-02-16T17:27:21.396+05:30 ERROR 5148 --- [dispatch-load-balancer] [           main] c.f.d.exception.GlobalExceptionHandler   : NoOrdersException: No orders available in the system for dispatch planning
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /dispatch/plan
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.freightfox.dispatch.controller.DispatchController
+           Method = com.freightfox.dispatch.controller.DispatchController#getDispatchPlan()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = com.freightfox.dispatch.exception.NoOrdersException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"timestamp":"2026-02-16T17:27:21.3963424","status":400,"error":"Bad Request","message":"No orders available in the system for dispatch planning","path":"/dispatch/plan","validationErrors":null,"errors":null,"details":null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2026-02-16T17:27:21.418+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.d.controller.DispatchController      : GET /api/dispatch/plan - Generating dispatch plan
+2026-02-16T17:27:21.420+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.d.controller.DispatchController      : Dispatch plan generated: 2/2 orders assigned, 1 vehicles used
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /dispatch/plan
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.freightfox.dispatch.controller.DispatchController
+           Method = com.freightfox.dispatch.controller.DispatchController#getDispatchPlan()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"message":"Dispatch plan generated successfully","status":"SUCCESS","dispatchPlan":[{"vehicleId":"VEH-001","totalLoad":5000,"totalDistance":"4.20 km","assignedOrders":[{"orderId":"ORD-001","address":"Test Address","packageWeight":5000,"priority":"HIGH","distanceFromVehicle":"4.20 km"}],"utilizationPercentage":50.0,"orderCount":1}],"summary":{"totalOrders":2,"assignedOrders":2,"unassignedOrders":0,"totalVehicles":2,"usedVehicles":1,"totalDistanceCovered":"4.20 km","averageUtilization":50.0}}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2026-02-16T17:27:21.461+05:30  WARN 5148 --- [dispatch-load-balancer] [           main] c.f.d.exception.GlobalExceptionHandler   : Validation failed: 7 errors
+2026-02-16T17:27:21.463+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] c.f.d.exception.GlobalExceptionHandler   : Validation error - Field: orders[0].packageWeight, Message: Package weight must be at least 1 gram
+2026-02-16T17:27:21.463+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] c.f.d.exception.GlobalExceptionHandler   : Validation error - Field: orders[0].address, Message: Address must be between 10 and 500 characters
+2026-02-16T17:27:21.463+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] c.f.d.exception.GlobalExceptionHandler   : Validation error - Field: orders[0].latitude, Message: Latitude must be between -90 and 90 degrees
+2026-02-16T17:27:21.463+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] c.f.d.exception.GlobalExceptionHandler   : Validation error - Field: orders[0].longitude, Message: Longitude is required
+2026-02-16T17:27:21.463+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] c.f.d.exception.GlobalExceptionHandler   : Validation error - Field: orders[0].orderId, Message: Order ID must contain only uppercase letters, numbers, and hyphens
+2026-02-16T17:27:21.463+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] c.f.d.exception.GlobalExceptionHandler   : Validation error - Field: orders[0].orderId, Message: Order ID is required
+2026-02-16T17:27:21.463+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] c.f.d.exception.GlobalExceptionHandler   : Validation error - Field: orders[0].priority, Message: Priority must be HIGH, MEDIUM, or LOW
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /dispatch/orders
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", Content-Length:"184"]
+             Body = {
+  "orders": [
+    {
+      "orderId": "",
+      "latitude": 95.0,
+      "longitude": null,
+      "address": "Short",
+      "packageWeight": -5,
+      "priority": "URGENT"
+    }
+  ]
+}
+
+    Session Attrs = {}
+
+Handler:
+             Type = com.freightfox.dispatch.controller.DispatchController
+           Method = com.freightfox.dispatch.controller.DispatchController#acceptOrders(OrderRequestDTO)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.bind.MethodArgumentNotValidException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"timestamp":"2026-02-16T17:27:21.4631976","status":400,"error":"Bad Request","message":"Validation failed","path":"/dispatch/orders","validationErrors":{"orders[0].priority":"Priority must be HIGH, MEDIUM, or LOW","orders[0].orderId":"Order ID is required","orders[0].packageWeight":"Package weight must be at least 1 gram","orders[0].latitude":"Latitude must be between -90 and 90 degrees","orders[0].address":"Address must be between 10 and 500 characters","orders[0].longitude":"Longitude is required"},"errors":null,"details":null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2026-02-16T17:27:21.481+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.d.controller.DispatchController      : GET /api/dispatch/plan - Generating dispatch plan
+2026-02-16T17:27:21.482+05:30 ERROR 5148 --- [dispatch-load-balancer] [           main] c.f.d.exception.GlobalExceptionHandler   : NoVehiclesException: No vehicles available in the fleet for dispatch planning
+2026-02-16T17:27:21.489+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] c.f.d.controller.DispatchController      : GET /api/dispatch/health - Health check
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.565 s -- in com.freightfox.dispatch.controller.DispatchControllerTest
+[INFO] Running com.freightfox.dispatch.integration.DispatchIntegrationTest
+2026-02-16T17:27:21.520+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.freightfox.dispatch.integration.DispatchIntegrationTest]: DispatchIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-02-16T17:27:21.546+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.freightfox.dispatch.DispatchApplication for test class com.freightfox.dispatch.integration.DispatchIntegrationTest
+2026-02-16T17:27:21.561+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.0)
+
+2026-02-16T17:27:21.652+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.d.i.DispatchIntegrationTest          : Starting DispatchIntegrationTest using Java 21.0.10 with PID 5148 (started by INDIA TECHNOLOGY in C:\Coding\Java\freightfox)
+2026-02-16T17:27:21.652+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] c.f.d.i.DispatchIntegrationTest          : Running with Spring Boot v3.5.0, Spring v6.2.7
+2026-02-16T17:27:21.653+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.d.i.DispatchIntegrationTest          : The following 1 profile is active: "test"
+2026-02-16T17:27:22.403+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-16T17:27:22.488+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 66 ms. Found 2 JPA repository interfaces.
+2026-02-16T17:27:23.218+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2026-02-16T17:27:23.238+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-16T17:27:23.240+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-02-16T17:27:23.335+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2026-02-16T17:27:23.335+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1682 ms
+2026-02-16T17:27:23.653+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-16T17:27:23.791+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2026-02-16T17:27:23.843+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-02-16T17:27:24.088+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-16T17:27:24.156+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-02-16T17:27:25.604+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@569d6e0d
+2026-02-16T17:27:25.607+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-02-16T17:27:25.757+05:30  WARN 5148 --- [dispatch-load-balancer] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-16T17:27:25.938+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-16T17:27:27.394+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-16T17:27:27.627+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-16T17:27:28.133+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-16T17:27:28.978+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.DispatchService     : DispatchService initialized with dependencies
+2026-02-16T17:27:29.027+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.d.controller.DispatchController      : DispatchController initialized
+2026-02-16T17:27:29.211+05:30  WARN 5148 --- [dispatch-load-balancer] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-16T17:27:29.522+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://aws-1-ap-south-1.pooler.supabase.com:5432/postgres'
+2026-02-16T17:27:29.814+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 52097 (http) with context path '/api'
+2026-02-16T17:27:29.822+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.d.i.DispatchIntegrationTest          : Started DispatchIntegrationTest in 8.263 seconds (process running for 16.019)
+2026-02-16T17:27:29.945+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0
+Hibernate: 
+    /* <criteria> */ select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0
+2026-02-16T17:27:30.057+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] org.hibernate.SQL                        : 
+    /* delete for com.freightfox.dispatch.model.entity.DeliveryOrder */delete 
+    from
+        delivery_orders 
+    where
+        order_id=?
+Hibernate: 
+    /* delete for com.freightfox.dispatch.model.entity.DeliveryOrder */delete 
+    from
+        delivery_orders 
+    where
+        order_id=?
+2026-02-16T17:27:30.096+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] org.hibernate.SQL                        : 
+    /* delete for com.freightfox.dispatch.model.entity.DeliveryOrder */delete 
+    from
+        delivery_orders 
+    where
+        order_id=?
+Hibernate: 
+    /* delete for com.freightfox.dispatch.model.entity.DeliveryOrder */delete 
+    from
+        delivery_orders 
+    where
+        order_id=?
+2026-02-16T17:27:30.131+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] org.hibernate.SQL                        : 
+    /* delete for com.freightfox.dispatch.model.entity.DeliveryOrder */delete 
+    from
+        delivery_orders 
+    where
+        order_id=?
+Hibernate: 
+    /* delete for com.freightfox.dispatch.model.entity.DeliveryOrder */delete 
+    from
+        delivery_orders 
+    where
+        order_id=?
+2026-02-16T17:27:30.224+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0
+Hibernate: 
+    /* <criteria> */ select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0
+2026-02-16T17:27:30.257+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] org.hibernate.SQL                        : 
+    /* delete for com.freightfox.dispatch.model.entity.Vehicle */delete 
+    from
+        vehicles 
+    where
+        vehicle_id=?
+Hibernate: 
+    /* delete for com.freightfox.dispatch.model.entity.Vehicle */delete 
+    from
+        vehicles 
+    where
+        vehicle_id=?
+2026-02-16T17:27:30.297+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] org.hibernate.SQL                        : 
+    /* delete for com.freightfox.dispatch.model.entity.Vehicle */delete 
+    from
+        vehicles 
+    where
+        vehicle_id=?
+Hibernate: 
+    /* delete for com.freightfox.dispatch.model.entity.Vehicle */delete 
+    from
+        vehicles 
+    where
+        vehicle_id=?
+2026-02-16T17:27:30.634+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-16T17:27:30.634+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-02-16T17:27:30.636+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-02-16T17:27:30.699+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-2] c.f.d.controller.DispatchController      : POST /api/dispatch/orders - Received 3 orders
+2026-02-16T17:27:30.702+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-2] c.f.d.controller.DispatchController      : First order ID: ORD-001
+2026-02-16T17:27:30.703+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-2] c.f.dispatch.service.DispatchService     : Saving 3 orders to database
+2026-02-16T17:27:30.778+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-2] org.hibernate.SQL                        : 
+    /* select
+        count(*) 
+    from
+        DeliveryOrder x 
+    WHERE
+        x.orderId = :orderId */ select
+            count(*) 
+        from
+            delivery_orders do1_0 
+        where
+            do1_0.order_id=?
+Hibernate: 
+    /* select
+        count(*) 
+    from
+        DeliveryOrder x 
+    WHERE
+        x.orderId = :orderId */ select
+            count(*) 
+        from
+            delivery_orders do1_0 
+        where
+            do1_0.order_id=?
+2026-02-16T17:27:30.828+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-2] org.hibernate.SQL                        : 
+    /* select
+        count(*) 
+    from
+        DeliveryOrder x 
+    WHERE
+        x.orderId = :orderId */ select
+            count(*) 
+        from
+            delivery_orders do1_0 
+        where
+            do1_0.order_id=?
+Hibernate: 
+    /* select
+        count(*) 
+    from
+        DeliveryOrder x 
+    WHERE
+        x.orderId = :orderId */ select
+            count(*) 
+        from
+            delivery_orders do1_0 
+        where
+            do1_0.order_id=?
+2026-02-16T17:27:30.870+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-2] org.hibernate.SQL                        : 
+    /* select
+        count(*) 
+    from
+        DeliveryOrder x 
+    WHERE
+        x.orderId = :orderId */ select
+            count(*) 
+        from
+            delivery_orders do1_0 
+        where
+            do1_0.order_id=?
+Hibernate: 
+    /* select
+        count(*) 
+    from
+        DeliveryOrder x 
+    WHERE
+        x.orderId = :orderId */ select
+            count(*) 
+        from
+            delivery_orders do1_0 
+        where
+            do1_0.order_id=?
+2026-02-16T17:27:30.932+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-2] org.hibernate.SQL                        : 
+    select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0 
+    where
+        do1_0.order_id=?
+Hibernate: 
+    select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0 
+    where
+        do1_0.order_id=?
+2026-02-16T17:27:31.004+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-2] org.hibernate.SQL                        : 
+    select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0 
+    where
+        do1_0.order_id=?
+Hibernate: 
+    select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0 
+    where
+        do1_0.order_id=?
+2026-02-16T17:27:31.050+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-2] org.hibernate.SQL                        : 
+    select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0 
+    where
+        do1_0.order_id=?
+Hibernate: 
+    select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0 
+    where
+        do1_0.order_id=?
+2026-02-16T17:27:31.119+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-2] c.f.dispatch.service.DispatchService     : Successfully saved 3 orders
+2026-02-16T17:27:31.125+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-2] org.hibernate.SQL                        : 
+    /* insert for
+        com.freightfox.dispatch.model.entity.DeliveryOrder */insert 
+    into
+        delivery_orders (address, created_at, latitude, longitude, package_weight, priority, updated_at, order_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    /* insert for
+        com.freightfox.dispatch.model.entity.DeliveryOrder */insert 
+    into
+        delivery_orders (address, created_at, latitude, longitude, package_weight, priority, updated_at, order_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-16T17:27:31.186+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-2] org.hibernate.SQL                        : 
+    /* insert for
+        com.freightfox.dispatch.model.entity.DeliveryOrder */insert 
+    into
+        delivery_orders (address, created_at, latitude, longitude, package_weight, priority, updated_at, order_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    /* insert for
+        com.freightfox.dispatch.model.entity.DeliveryOrder */insert 
+    into
+        delivery_orders (address, created_at, latitude, longitude, package_weight, priority, updated_at, order_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-16T17:27:31.225+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-2] org.hibernate.SQL                        : 
+    /* insert for
+        com.freightfox.dispatch.model.entity.DeliveryOrder */insert 
+    into
+        delivery_orders (address, created_at, latitude, longitude, package_weight, priority, updated_at, order_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    /* insert for
+        com.freightfox.dispatch.model.entity.DeliveryOrder */insert 
+    into
+        delivery_orders (address, created_at, latitude, longitude, package_weight, priority, updated_at, order_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-16T17:27:31.303+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-2] c.f.d.controller.DispatchController      : Orders saved successfully: Successfully saved 3 orders (2 HIGH, 1 MEDIUM, 0 LOW priority)
+2026-02-16T17:27:31.507+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0
+Hibernate: 
+    /* <criteria> */ select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0
+? Step 1 Complete: 3 orders saved to database
+2026-02-16T17:27:31.626+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0
+Hibernate: 
+    /* <criteria> */ select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0
+2026-02-16T17:27:31.674+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] org.hibernate.SQL                        : 
+    /* delete for com.freightfox.dispatch.model.entity.DeliveryOrder */delete 
+    from
+        delivery_orders 
+    where
+        order_id=?
+Hibernate: 
+    /* delete for com.freightfox.dispatch.model.entity.DeliveryOrder */delete 
+    from
+        delivery_orders 
+    where
+        order_id=?
+2026-02-16T17:27:31.711+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] org.hibernate.SQL                        : 
+    /* delete for com.freightfox.dispatch.model.entity.DeliveryOrder */delete 
+    from
+        delivery_orders 
+    where
+        order_id=?
+Hibernate: 
+    /* delete for com.freightfox.dispatch.model.entity.DeliveryOrder */delete 
+    from
+        delivery_orders 
+    where
+        order_id=?
+2026-02-16T17:27:31.781+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] org.hibernate.SQL                        : 
+    /* delete for com.freightfox.dispatch.model.entity.DeliveryOrder */delete 
+    from
+        delivery_orders 
+    where
+        order_id=?
+Hibernate: 
+    /* delete for com.freightfox.dispatch.model.entity.DeliveryOrder */delete 
+    from
+        delivery_orders 
+    where
+        order_id=?
+2026-02-16T17:27:31.853+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0
+Hibernate: 
+    /* <criteria> */ select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0
+2026-02-16T17:27:31.959+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-1] c.f.d.controller.DispatchController      : POST /api/dispatch/vehicles - Received 2 vehicles
+2026-02-16T17:27:31.959+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-1] c.f.d.controller.DispatchController      : First vehicle ID: VEH-001
+2026-02-16T17:27:31.961+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-1] c.f.dispatch.service.DispatchService     : Saving 2 vehicles to database
+2026-02-16T17:27:31.965+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-1] org.hibernate.SQL                        : 
+    /* select
+        count(*) 
+    from
+        Vehicle x 
+    WHERE
+        x.vehicleId = :vehicleId */ select
+            count(*) 
+        from
+            vehicles v1_0 
+        where
+            v1_0.vehicle_id=?
+Hibernate: 
+    /* select
+        count(*) 
+    from
+        Vehicle x 
+    WHERE
+        x.vehicleId = :vehicleId */ select
+            count(*) 
+        from
+            vehicles v1_0 
+        where
+            v1_0.vehicle_id=?
+2026-02-16T17:27:31.999+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-1] org.hibernate.SQL                        : 
+    /* select
+        count(*) 
+    from
+        Vehicle x 
+    WHERE
+        x.vehicleId = :vehicleId */ select
+            count(*) 
+        from
+            vehicles v1_0 
+        where
+            v1_0.vehicle_id=?
+Hibernate: 
+    /* select
+        count(*) 
+    from
+        Vehicle x 
+    WHERE
+        x.vehicleId = :vehicleId */ select
+            count(*) 
+        from
+            vehicles v1_0 
+        where
+            v1_0.vehicle_id=?
+2026-02-16T17:27:32.048+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-1] org.hibernate.SQL                        : 
+    select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0 
+    where
+        v1_0.vehicle_id=?
+Hibernate: 
+    select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0 
+    where
+        v1_0.vehicle_id=?
+2026-02-16T17:27:32.107+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-1] org.hibernate.SQL                        : 
+    select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0 
+    where
+        v1_0.vehicle_id=?
+Hibernate: 
+    select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0 
+    where
+        v1_0.vehicle_id=?
+2026-02-16T17:27:32.144+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-1] c.f.dispatch.service.DispatchService     : Successfully saved 2 vehicles
+2026-02-16T17:27:32.156+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-1] org.hibernate.SQL                        : 
+    /* insert for
+        com.freightfox.dispatch.model.entity.Vehicle */insert 
+    into
+        vehicles (capacity, created_at, current_address, current_latitude, current_longitude, updated_at, vehicle_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    /* insert for
+        com.freightfox.dispatch.model.entity.Vehicle */insert 
+    into
+        vehicles (capacity, created_at, current_address, current_latitude, current_longitude, updated_at, vehicle_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+2026-02-16T17:27:32.199+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-1] org.hibernate.SQL                        : 
+    /* insert for
+        com.freightfox.dispatch.model.entity.Vehicle */insert 
+    into
+        vehicles (capacity, created_at, current_address, current_latitude, current_longitude, updated_at, vehicle_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    /* insert for
+        com.freightfox.dispatch.model.entity.Vehicle */insert 
+    into
+        vehicles (capacity, created_at, current_address, current_latitude, current_longitude, updated_at, vehicle_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+2026-02-16T17:27:32.298+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-1] c.f.d.controller.DispatchController      : Vehicles saved successfully: Successfully saved 2 vehicles (Total capacity: 22000 grams)
+2026-02-16T17:27:32.302+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0
+Hibernate: 
+    /* <criteria> */ select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0
+? Step 2 Complete: 2 vehicles saved to database
+2026-02-16T17:27:32.406+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0
+Hibernate: 
+    /* <criteria> */ select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0
+2026-02-16T17:27:32.478+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0
+Hibernate: 
+    /* <criteria> */ select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0
+2026-02-16T17:27:32.539+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] org.hibernate.SQL                        : 
+    /* delete for com.freightfox.dispatch.model.entity.Vehicle */delete 
+    from
+        vehicles 
+    where
+        vehicle_id=?
+Hibernate: 
+    /* delete for com.freightfox.dispatch.model.entity.Vehicle */delete 
+    from
+        vehicles 
+    where
+        vehicle_id=?
+2026-02-16T17:27:32.581+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] org.hibernate.SQL                        : 
+    /* delete for com.freightfox.dispatch.model.entity.Vehicle */delete 
+    from
+        vehicles 
+    where
+        vehicle_id=?
+Hibernate: 
+    /* delete for com.freightfox.dispatch.model.entity.Vehicle */delete 
+    from
+        vehicles 
+    where
+        vehicle_id=?
+2026-02-16T17:27:32.661+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-4] c.f.d.controller.DispatchController      : POST /api/dispatch/orders - Received 3 orders
+2026-02-16T17:27:32.662+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-4] c.f.d.controller.DispatchController      : First order ID: ORD-001
+2026-02-16T17:27:32.662+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-4] c.f.dispatch.service.DispatchService     : Saving 3 orders to database
+2026-02-16T17:27:32.664+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-4] org.hibernate.SQL                        : 
+    /* select
+        count(*) 
+    from
+        DeliveryOrder x 
+    WHERE
+        x.orderId = :orderId */ select
+            count(*) 
+        from
+            delivery_orders do1_0 
+        where
+            do1_0.order_id=?
+Hibernate: 
+    /* select
+        count(*) 
+    from
+        DeliveryOrder x 
+    WHERE
+        x.orderId = :orderId */ select
+            count(*) 
+        from
+            delivery_orders do1_0 
+        where
+            do1_0.order_id=?
+2026-02-16T17:27:32.698+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-4] org.hibernate.SQL                        : 
+    /* select
+        count(*) 
+    from
+        DeliveryOrder x 
+    WHERE
+        x.orderId = :orderId */ select
+            count(*) 
+        from
+            delivery_orders do1_0 
+        where
+            do1_0.order_id=?
+Hibernate: 
+    /* select
+        count(*) 
+    from
+        DeliveryOrder x 
+    WHERE
+        x.orderId = :orderId */ select
+            count(*) 
+        from
+            delivery_orders do1_0 
+        where
+            do1_0.order_id=?
+2026-02-16T17:27:32.740+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-4] org.hibernate.SQL                        : 
+    /* select
+        count(*) 
+    from
+        DeliveryOrder x 
+    WHERE
+        x.orderId = :orderId */ select
+            count(*) 
+        from
+            delivery_orders do1_0 
+        where
+            do1_0.order_id=?
+Hibernate: 
+    /* select
+        count(*) 
+    from
+        DeliveryOrder x 
+    WHERE
+        x.orderId = :orderId */ select
+            count(*) 
+        from
+            delivery_orders do1_0 
+        where
+            do1_0.order_id=?
+2026-02-16T17:27:32.777+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-4] org.hibernate.SQL                        : 
+    select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0 
+    where
+        do1_0.order_id=?
+Hibernate: 
+    select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0 
+    where
+        do1_0.order_id=?
+2026-02-16T17:27:32.818+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-4] org.hibernate.SQL                        : 
+    select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0 
+    where
+        do1_0.order_id=?
+Hibernate: 
+    select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0 
+    where
+        do1_0.order_id=?
+2026-02-16T17:27:32.854+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-4] org.hibernate.SQL                        : 
+    select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0 
+    where
+        do1_0.order_id=?
+Hibernate: 
+    select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0 
+    where
+        do1_0.order_id=?
+2026-02-16T17:27:32.885+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-4] c.f.dispatch.service.DispatchService     : Successfully saved 3 orders
+2026-02-16T17:27:32.888+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-4] org.hibernate.SQL                        : 
+    /* insert for
+        com.freightfox.dispatch.model.entity.DeliveryOrder */insert 
+    into
+        delivery_orders (address, created_at, latitude, longitude, package_weight, priority, updated_at, order_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    /* insert for
+        com.freightfox.dispatch.model.entity.DeliveryOrder */insert 
+    into
+        delivery_orders (address, created_at, latitude, longitude, package_weight, priority, updated_at, order_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-16T17:27:32.922+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-4] org.hibernate.SQL                        : 
+    /* insert for
+        com.freightfox.dispatch.model.entity.DeliveryOrder */insert 
+    into
+        delivery_orders (address, created_at, latitude, longitude, package_weight, priority, updated_at, order_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    /* insert for
+        com.freightfox.dispatch.model.entity.DeliveryOrder */insert 
+    into
+        delivery_orders (address, created_at, latitude, longitude, package_weight, priority, updated_at, order_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-16T17:27:32.967+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-4] org.hibernate.SQL                        : 
+    /* insert for
+        com.freightfox.dispatch.model.entity.DeliveryOrder */insert 
+    into
+        delivery_orders (address, created_at, latitude, longitude, package_weight, priority, updated_at, order_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    /* insert for
+        com.freightfox.dispatch.model.entity.DeliveryOrder */insert 
+    into
+        delivery_orders (address, created_at, latitude, longitude, package_weight, priority, updated_at, order_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-16T17:27:33.046+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-4] c.f.d.controller.DispatchController      : Orders saved successfully: Successfully saved 3 orders (2 HIGH, 1 MEDIUM, 0 LOW priority)
+2026-02-16T17:27:33.053+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0
+Hibernate: 
+    /* <criteria> */ select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0
+? Step 1 Complete: 3 orders saved to database
+2026-02-16T17:27:33.139+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-5] c.f.d.controller.DispatchController      : POST /api/dispatch/vehicles - Received 2 vehicles
+2026-02-16T17:27:33.139+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-5] c.f.d.controller.DispatchController      : First vehicle ID: VEH-001
+2026-02-16T17:27:33.140+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-5] c.f.dispatch.service.DispatchService     : Saving 2 vehicles to database
+2026-02-16T17:27:33.140+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-5] org.hibernate.SQL                        : 
+    /* select
+        count(*) 
+    from
+        Vehicle x 
+    WHERE
+        x.vehicleId = :vehicleId */ select
+            count(*) 
+        from
+            vehicles v1_0 
+        where
+            v1_0.vehicle_id=?
+Hibernate: 
+    /* select
+        count(*) 
+    from
+        Vehicle x 
+    WHERE
+        x.vehicleId = :vehicleId */ select
+            count(*) 
+        from
+            vehicles v1_0 
+        where
+            v1_0.vehicle_id=?
+2026-02-16T17:27:33.207+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-5] org.hibernate.SQL                        : 
+    /* select
+        count(*) 
+    from
+        Vehicle x 
+    WHERE
+        x.vehicleId = :vehicleId */ select
+            count(*) 
+        from
+            vehicles v1_0 
+        where
+            v1_0.vehicle_id=?
+Hibernate: 
+    /* select
+        count(*) 
+    from
+        Vehicle x 
+    WHERE
+        x.vehicleId = :vehicleId */ select
+            count(*) 
+        from
+            vehicles v1_0 
+        where
+            v1_0.vehicle_id=?
+2026-02-16T17:27:33.267+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-5] org.hibernate.SQL                        : 
+    select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0 
+    where
+        v1_0.vehicle_id=?
+Hibernate: 
+    select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0 
+    where
+        v1_0.vehicle_id=?
+2026-02-16T17:27:33.312+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-5] org.hibernate.SQL                        : 
+    select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0 
+    where
+        v1_0.vehicle_id=?
+Hibernate: 
+    select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0 
+    where
+        v1_0.vehicle_id=?
+2026-02-16T17:27:33.353+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-5] c.f.dispatch.service.DispatchService     : Successfully saved 2 vehicles
+2026-02-16T17:27:33.356+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-5] org.hibernate.SQL                        : 
+    /* insert for
+        com.freightfox.dispatch.model.entity.Vehicle */insert 
+    into
+        vehicles (capacity, created_at, current_address, current_latitude, current_longitude, updated_at, vehicle_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    /* insert for
+        com.freightfox.dispatch.model.entity.Vehicle */insert 
+    into
+        vehicles (capacity, created_at, current_address, current_latitude, current_longitude, updated_at, vehicle_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+2026-02-16T17:27:33.396+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-5] org.hibernate.SQL                        : 
+    /* insert for
+        com.freightfox.dispatch.model.entity.Vehicle */insert 
+    into
+        vehicles (capacity, created_at, current_address, current_latitude, current_longitude, updated_at, vehicle_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    /* insert for
+        com.freightfox.dispatch.model.entity.Vehicle */insert 
+    into
+        vehicles (capacity, created_at, current_address, current_latitude, current_longitude, updated_at, vehicle_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+2026-02-16T17:27:33.470+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-5] c.f.d.controller.DispatchController      : Vehicles saved successfully: Successfully saved 2 vehicles (Total capacity: 22000 grams)
+2026-02-16T17:27:33.478+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0
+Hibernate: 
+    /* <criteria> */ select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0
+? Step 2 Complete: 2 vehicles saved to database
+2026-02-16T17:27:33.575+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-9] c.f.d.controller.DispatchController      : GET /api/dispatch/plan - Generating dispatch plan
+2026-02-16T17:27:33.575+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-9] c.f.dispatch.service.DispatchService     : Generating dispatch plan...
+2026-02-16T17:27:33.578+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-9] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0
+Hibernate: 
+    /* <criteria> */ select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0
+2026-02-16T17:27:33.622+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-9] c.f.dispatch.service.DispatchService     : Fetched 3 orders from database
+2026-02-16T17:27:33.624+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-9] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0
+Hibernate: 
+    /* <criteria> */ select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0
+2026-02-16T17:27:33.667+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-9] c.f.dispatch.service.DispatchService     : Fetched 2 vehicles from database
+2026-02-16T17:27:33.668+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-9] c.f.dispatch.service.DispatchService     : Capacity check: Orders = 16000 grams, Fleet = 22000 grams
+2026-02-16T17:27:33.668+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-9] c.f.dispatch.service.DispatchService     : Running optimization algorithm...
+2026-02-16T17:27:33.668+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-9] c.f.dispatch.service.OptimizationEngine  : Starting dispatch optimization: 3 orders, 2 vehicles
+2026-02-16T17:27:33.669+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-9] c.f.dispatch.service.OptimizationEngine  : Orders sorted: 2 HIGH, 1 MEDIUM, 0 LOW priority
+2026-02-16T17:27:33.670+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-9] c.f.dispatch.service.OptimizationEngine  : Initialized 2 vehicle states
+2026-02-16T17:27:33.677+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-9] c.f.dispatch.service.OptimizationEngine  : Distance matrix built: 6 entries cached
+2026-02-16T17:27:33.677+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-9] c.f.dispatch.service.OptimizationEngine  : Processing order ORD-002: HIGH priority, 8000 grams
+2026-02-16T17:27:33.677+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-9] c.f.dispatch.service.OptimizationEngine  : ? Assigned order ORD-002 to vehicle VEH-002 (distance: {:.2f} km, load: 0.0/8000 grams)
+2026-02-16T17:27:33.679+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-9] c.f.dispatch.service.OptimizationEngine  : Processing order ORD-001: HIGH priority, 5000 grams
+2026-02-16T17:27:33.679+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-9] c.f.dispatch.service.OptimizationEngine  : ? Assigned order ORD-001 to vehicle VEH-001 (distance: {:.2f} km, load: 0.0/5000 grams)
+2026-02-16T17:27:33.679+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-9] c.f.dispatch.service.OptimizationEngine  : Processing order ORD-003: MEDIUM priority, 3000 grams
+2026-02-16T17:27:33.679+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-9] c.f.dispatch.service.OptimizationEngine  : ? Assigned order ORD-003 to vehicle VEH-001 (distance: {:.2f} km, load: 14.309966625580742/8000 grams)
+2026-02-16T17:27:33.679+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-9] c.f.dispatch.service.OptimizationEngine  : Assignment complete: 3 assigned, 0 unassigned
+2026-02-16T17:27:33.679+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-9] c.f.dispatch.service.OptimizationEngine  : Optimization complete: 3/3 orders assigned, 2 vehicles used
+2026-02-16T17:27:33.679+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-9] c.f.dispatch.service.DispatchService     : Dispatch plan generated: 2 vehicles used, 3/3 orders assigned
+2026-02-16T17:27:33.706+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-9] c.f.d.controller.DispatchController      : Dispatch plan generated: 3/3 orders assigned, 2 vehicles used
+? VEH-002 assigned 1 orders (Load: 8000/12000, Utilization: 66.7%)
+? VEH-001 assigned 2 orders (Load: 8000/10000, Utilization: 80.0%)
+? Step 3 Complete: Dispatch plan generated and verified
+2026-02-16T17:27:33.743+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0
+Hibernate: 
+    /* <criteria> */ select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0
+2026-02-16T17:27:33.788+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] org.hibernate.SQL                        : 
+    /* delete for com.freightfox.dispatch.model.entity.DeliveryOrder */delete 
+    from
+        delivery_orders 
+    where
+        order_id=?
+Hibernate: 
+    /* delete for com.freightfox.dispatch.model.entity.DeliveryOrder */delete 
+    from
+        delivery_orders 
+    where
+        order_id=?
+2026-02-16T17:27:33.828+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] org.hibernate.SQL                        : 
+    /* delete for com.freightfox.dispatch.model.entity.DeliveryOrder */delete 
+    from
+        delivery_orders 
+    where
+        order_id=?
+Hibernate: 
+    /* delete for com.freightfox.dispatch.model.entity.DeliveryOrder */delete 
+    from
+        delivery_orders 
+    where
+        order_id=?
+2026-02-16T17:27:33.862+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] org.hibernate.SQL                        : 
+    /* delete for com.freightfox.dispatch.model.entity.DeliveryOrder */delete 
+    from
+        delivery_orders 
+    where
+        order_id=?
+Hibernate: 
+    /* delete for com.freightfox.dispatch.model.entity.DeliveryOrder */delete 
+    from
+        delivery_orders 
+    where
+        order_id=?
+2026-02-16T17:27:33.928+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0
+Hibernate: 
+    /* <criteria> */ select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0
+2026-02-16T17:27:33.969+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] org.hibernate.SQL                        : 
+    /* delete for com.freightfox.dispatch.model.entity.Vehicle */delete 
+    from
+        vehicles 
+    where
+        vehicle_id=?
+Hibernate: 
+    /* delete for com.freightfox.dispatch.model.entity.Vehicle */delete 
+    from
+        vehicles 
+    where
+        vehicle_id=?
+2026-02-16T17:27:34.006+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] org.hibernate.SQL                        : 
+    /* delete for com.freightfox.dispatch.model.entity.Vehicle */delete 
+    from
+        vehicles 
+    where
+        vehicle_id=?
+Hibernate: 
+    /* delete for com.freightfox.dispatch.model.entity.Vehicle */delete 
+    from
+        vehicles 
+    where
+        vehicle_id=?
+2026-02-16T17:27:34.107+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-6] c.f.d.controller.DispatchController      : POST /api/dispatch/vehicles - Received 2 vehicles
+2026-02-16T17:27:34.109+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-6] c.f.d.controller.DispatchController      : First vehicle ID: VEH-001
+2026-02-16T17:27:34.109+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-6] c.f.dispatch.service.DispatchService     : Saving 2 vehicles to database
+2026-02-16T17:27:34.109+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-6] org.hibernate.SQL                        : 
+    /* select
+        count(*) 
+    from
+        Vehicle x 
+    WHERE
+        x.vehicleId = :vehicleId */ select
+            count(*) 
+        from
+            vehicles v1_0 
+        where
+            v1_0.vehicle_id=?
+Hibernate: 
+    /* select
+        count(*) 
+    from
+        Vehicle x 
+    WHERE
+        x.vehicleId = :vehicleId */ select
+            count(*) 
+        from
+            vehicles v1_0 
+        where
+            v1_0.vehicle_id=?
+2026-02-16T17:27:34.149+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-6] org.hibernate.SQL                        : 
+    /* select
+        count(*) 
+    from
+        Vehicle x 
+    WHERE
+        x.vehicleId = :vehicleId */ select
+            count(*) 
+        from
+            vehicles v1_0 
+        where
+            v1_0.vehicle_id=?
+Hibernate: 
+    /* select
+        count(*) 
+    from
+        Vehicle x 
+    WHERE
+        x.vehicleId = :vehicleId */ select
+            count(*) 
+        from
+            vehicles v1_0 
+        where
+            v1_0.vehicle_id=?
+2026-02-16T17:27:34.192+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-6] org.hibernate.SQL                        : 
+    select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0 
+    where
+        v1_0.vehicle_id=?
+Hibernate: 
+    select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0 
+    where
+        v1_0.vehicle_id=?
+2026-02-16T17:27:34.223+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-6] org.hibernate.SQL                        : 
+    select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0 
+    where
+        v1_0.vehicle_id=?
+Hibernate: 
+    select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0 
+    where
+        v1_0.vehicle_id=?
+2026-02-16T17:27:34.257+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-6] c.f.dispatch.service.DispatchService     : Successfully saved 2 vehicles
+2026-02-16T17:27:34.258+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-6] org.hibernate.SQL                        : 
+    /* insert for
+        com.freightfox.dispatch.model.entity.Vehicle */insert 
+    into
+        vehicles (capacity, created_at, current_address, current_latitude, current_longitude, updated_at, vehicle_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    /* insert for
+        com.freightfox.dispatch.model.entity.Vehicle */insert 
+    into
+        vehicles (capacity, created_at, current_address, current_latitude, current_longitude, updated_at, vehicle_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+2026-02-16T17:27:34.556+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-6] org.hibernate.SQL                        : 
+    /* insert for
+        com.freightfox.dispatch.model.entity.Vehicle */insert 
+    into
+        vehicles (capacity, created_at, current_address, current_latitude, current_longitude, updated_at, vehicle_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    /* insert for
+        com.freightfox.dispatch.model.entity.Vehicle */insert 
+    into
+        vehicles (capacity, created_at, current_address, current_latitude, current_longitude, updated_at, vehicle_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+2026-02-16T17:27:34.631+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-6] c.f.d.controller.DispatchController      : Vehicles saved successfully: Successfully saved 2 vehicles (Total capacity: 22000 grams)
+2026-02-16T17:27:34.638+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0
+Hibernate: 
+    /* <criteria> */ select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0
+? Step 2 Complete: 2 vehicles saved to database
+2026-02-16T17:27:34.727+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-8] c.f.d.controller.DispatchController      : GET /api/dispatch/plan - Generating dispatch plan
+2026-02-16T17:27:34.727+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-8] c.f.dispatch.service.DispatchService     : Generating dispatch plan...
+2026-02-16T17:27:34.729+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-8] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0
+Hibernate: 
+    /* <criteria> */ select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0
+2026-02-16T17:27:34.781+05:30 ERROR 5148 --- [dispatch-load-balancer] [o-auto-1-exec-8] c.f.dispatch.service.DispatchService     : No orders found in database
+2026-02-16T17:27:34.820+05:30 ERROR 5148 --- [dispatch-load-balancer] [o-auto-1-exec-8] c.f.d.exception.GlobalExceptionHandler   : NoOrdersException: No orders available in the system for dispatch planning
+? Step 4 Complete: Correctly handled missing orders
+2026-02-16T17:27:34.843+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0
+Hibernate: 
+    /* <criteria> */ select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0
+2026-02-16T17:27:34.925+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0
+Hibernate: 
+    /* <criteria> */ select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0
+2026-02-16T17:27:34.966+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] org.hibernate.SQL                        : 
+    /* delete for com.freightfox.dispatch.model.entity.Vehicle */delete 
+    from
+        vehicles 
+    where
+        vehicle_id=?
+Hibernate: 
+    /* delete for com.freightfox.dispatch.model.entity.Vehicle */delete 
+    from
+        vehicles 
+    where
+        vehicle_id=?
+2026-02-16T17:27:35.003+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] org.hibernate.SQL                        : 
+    /* delete for com.freightfox.dispatch.model.entity.Vehicle */delete 
+    from
+        vehicles 
+    where
+        vehicle_id=?
+Hibernate: 
+    /* delete for com.freightfox.dispatch.model.entity.Vehicle */delete 
+    from
+        vehicles 
+    where
+        vehicle_id=?
+2026-02-16T17:27:35.089+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-7] c.f.d.controller.DispatchController      : POST /api/dispatch/orders - Received 3 orders
+2026-02-16T17:27:35.089+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-7] c.f.d.controller.DispatchController      : First order ID: ORD-001
+2026-02-16T17:27:35.090+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-7] c.f.dispatch.service.DispatchService     : Saving 3 orders to database
+2026-02-16T17:27:35.090+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-7] org.hibernate.SQL                        : 
+    /* select
+        count(*) 
+    from
+        DeliveryOrder x 
+    WHERE
+        x.orderId = :orderId */ select
+            count(*) 
+        from
+            delivery_orders do1_0 
+        where
+            do1_0.order_id=?
+Hibernate: 
+    /* select
+        count(*) 
+    from
+        DeliveryOrder x 
+    WHERE
+        x.orderId = :orderId */ select
+            count(*) 
+        from
+            delivery_orders do1_0 
+        where
+            do1_0.order_id=?
+2026-02-16T17:27:35.126+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-7] org.hibernate.SQL                        : 
+    /* select
+        count(*) 
+    from
+        DeliveryOrder x 
+    WHERE
+        x.orderId = :orderId */ select
+            count(*) 
+        from
+            delivery_orders do1_0 
+        where
+            do1_0.order_id=?
+Hibernate: 
+    /* select
+        count(*) 
+    from
+        DeliveryOrder x 
+    WHERE
+        x.orderId = :orderId */ select
+            count(*) 
+        from
+            delivery_orders do1_0 
+        where
+            do1_0.order_id=?
+2026-02-16T17:27:35.156+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-7] org.hibernate.SQL                        : 
+    /* select
+        count(*) 
+    from
+        DeliveryOrder x 
+    WHERE
+        x.orderId = :orderId */ select
+            count(*) 
+        from
+            delivery_orders do1_0 
+        where
+            do1_0.order_id=?
+Hibernate: 
+    /* select
+        count(*) 
+    from
+        DeliveryOrder x 
+    WHERE
+        x.orderId = :orderId */ select
+            count(*) 
+        from
+            delivery_orders do1_0 
+        where
+            do1_0.order_id=?
+2026-02-16T17:27:35.190+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-7] org.hibernate.SQL                        : 
+    select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0 
+    where
+        do1_0.order_id=?
+Hibernate: 
+    select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0 
+    where
+        do1_0.order_id=?
+2026-02-16T17:27:35.222+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-7] org.hibernate.SQL                        : 
+    select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0 
+    where
+        do1_0.order_id=?
+Hibernate: 
+    select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0 
+    where
+        do1_0.order_id=?
+2026-02-16T17:27:35.253+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-7] org.hibernate.SQL                        : 
+    select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0 
+    where
+        do1_0.order_id=?
+Hibernate: 
+    select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0 
+    where
+        do1_0.order_id=?
+2026-02-16T17:27:35.289+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-7] c.f.dispatch.service.DispatchService     : Successfully saved 3 orders
+2026-02-16T17:27:35.290+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-7] org.hibernate.SQL                        : 
+    /* insert for
+        com.freightfox.dispatch.model.entity.DeliveryOrder */insert 
+    into
+        delivery_orders (address, created_at, latitude, longitude, package_weight, priority, updated_at, order_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    /* insert for
+        com.freightfox.dispatch.model.entity.DeliveryOrder */insert 
+    into
+        delivery_orders (address, created_at, latitude, longitude, package_weight, priority, updated_at, order_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-16T17:27:35.328+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-7] org.hibernate.SQL                        : 
+    /* insert for
+        com.freightfox.dispatch.model.entity.DeliveryOrder */insert 
+    into
+        delivery_orders (address, created_at, latitude, longitude, package_weight, priority, updated_at, order_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    /* insert for
+        com.freightfox.dispatch.model.entity.DeliveryOrder */insert 
+    into
+        delivery_orders (address, created_at, latitude, longitude, package_weight, priority, updated_at, order_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-16T17:27:35.361+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-7] org.hibernate.SQL                        : 
+    /* insert for
+        com.freightfox.dispatch.model.entity.DeliveryOrder */insert 
+    into
+        delivery_orders (address, created_at, latitude, longitude, package_weight, priority, updated_at, order_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    /* insert for
+        com.freightfox.dispatch.model.entity.DeliveryOrder */insert 
+    into
+        delivery_orders (address, created_at, latitude, longitude, package_weight, priority, updated_at, order_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-16T17:27:35.428+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-7] c.f.d.controller.DispatchController      : Orders saved successfully: Successfully saved 3 orders (2 HIGH, 1 MEDIUM, 0 LOW priority)
+2026-02-16T17:27:35.435+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0
+Hibernate: 
+    /* <criteria> */ select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0
+? Step 1 Complete: 3 orders saved to database
+2026-02-16T17:27:35.519+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-3] c.f.d.controller.DispatchController      : GET /api/dispatch/plan - Generating dispatch plan
+2026-02-16T17:27:35.520+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-3] c.f.dispatch.service.DispatchService     : Generating dispatch plan...
+2026-02-16T17:27:35.523+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-3] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0
+Hibernate: 
+    /* <criteria> */ select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0
+2026-02-16T17:27:35.555+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-3] c.f.dispatch.service.DispatchService     : Fetched 3 orders from database
+2026-02-16T17:27:35.557+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-3] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0
+Hibernate: 
+    /* <criteria> */ select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0
+2026-02-16T17:27:35.595+05:30 ERROR 5148 --- [dispatch-load-balancer] [o-auto-1-exec-3] c.f.dispatch.service.DispatchService     : No vehicles found in database
+2026-02-16T17:27:35.627+05:30 ERROR 5148 --- [dispatch-load-balancer] [o-auto-1-exec-3] c.f.d.exception.GlobalExceptionHandler   : NoVehiclesException: No vehicles available in the fleet for dispatch planning
+? Step 5 Complete: Correctly handled missing vehicles
+2026-02-16T17:27:35.640+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0
+Hibernate: 
+    /* <criteria> */ select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0
+2026-02-16T17:27:35.680+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] org.hibernate.SQL                        : 
+    /* delete for com.freightfox.dispatch.model.entity.DeliveryOrder */delete 
+    from
+        delivery_orders 
+    where
+        order_id=?
+Hibernate: 
+    /* delete for com.freightfox.dispatch.model.entity.DeliveryOrder */delete 
+    from
+        delivery_orders 
+    where
+        order_id=?
+2026-02-16T17:27:35.716+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] org.hibernate.SQL                        : 
+    /* delete for com.freightfox.dispatch.model.entity.DeliveryOrder */delete 
+    from
+        delivery_orders 
+    where
+        order_id=?
+Hibernate: 
+    /* delete for com.freightfox.dispatch.model.entity.DeliveryOrder */delete 
+    from
+        delivery_orders 
+    where
+        order_id=?
+2026-02-16T17:27:35.753+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] org.hibernate.SQL                        : 
+    /* delete for com.freightfox.dispatch.model.entity.DeliveryOrder */delete 
+    from
+        delivery_orders 
+    where
+        order_id=?
+Hibernate: 
+    /* delete for com.freightfox.dispatch.model.entity.DeliveryOrder */delete 
+    from
+        delivery_orders 
+    where
+        order_id=?
+2026-02-16T17:27:35.817+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0
+Hibernate: 
+    /* <criteria> */ select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0
+2026-02-16T17:27:35.891+05:30  WARN 5148 --- [dispatch-load-balancer] [-auto-1-exec-10] c.f.d.exception.GlobalExceptionHandler   : Validation failed: 1 errors
+2026-02-16T17:27:35.891+05:30 DEBUG 5148 --- [dispatch-load-balancer] [-auto-1-exec-10] c.f.d.exception.GlobalExceptionHandler   : Validation error - Field: orders[0].latitude, Message: Latitude must be between -90 and 90 degrees
+? Step 6 Complete: Validation correctly rejected invalid data
+2026-02-16T17:27:35.903+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0
+Hibernate: 
+    /* <criteria> */ select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0
+2026-02-16T17:27:35.981+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0
+Hibernate: 
+    /* <criteria> */ select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0
+2026-02-16T17:27:36.055+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-2] c.f.d.controller.DispatchController      : POST /api/dispatch/orders - Received 1 orders
+2026-02-16T17:27:36.055+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-2] c.f.d.controller.DispatchController      : First order ID: ORD-DUPLICATE
+2026-02-16T17:27:36.056+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-2] c.f.dispatch.service.DispatchService     : Saving 1 orders to database
+2026-02-16T17:27:36.056+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-2] org.hibernate.SQL                        : 
+    /* select
+        count(*) 
+    from
+        DeliveryOrder x 
+    WHERE
+        x.orderId = :orderId */ select
+            count(*) 
+        from
+            delivery_orders do1_0 
+        where
+            do1_0.order_id=?
+Hibernate: 
+    /* select
+        count(*) 
+    from
+        DeliveryOrder x 
+    WHERE
+        x.orderId = :orderId */ select
+            count(*) 
+        from
+            delivery_orders do1_0 
+        where
+            do1_0.order_id=?
+2026-02-16T17:27:36.094+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-2] org.hibernate.SQL                        : 
+    select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0 
+    where
+        do1_0.order_id=?
+Hibernate: 
+    select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0 
+    where
+        do1_0.order_id=?
+2026-02-16T17:27:36.128+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-2] c.f.dispatch.service.DispatchService     : Successfully saved 1 orders
+2026-02-16T17:27:36.128+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-2] org.hibernate.SQL                        : 
+    /* insert for
+        com.freightfox.dispatch.model.entity.DeliveryOrder */insert 
+    into
+        delivery_orders (address, created_at, latitude, longitude, package_weight, priority, updated_at, order_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    /* insert for
+        com.freightfox.dispatch.model.entity.DeliveryOrder */insert 
+    into
+        delivery_orders (address, created_at, latitude, longitude, package_weight, priority, updated_at, order_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-16T17:27:36.204+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-2] c.f.d.controller.DispatchController      : Orders saved successfully: Successfully saved 1 orders (1 HIGH, 0 MEDIUM, 0 LOW priority)
+2026-02-16T17:27:36.214+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-1] c.f.d.controller.DispatchController      : POST /api/dispatch/orders - Received 1 orders
+2026-02-16T17:27:36.214+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-1] c.f.d.controller.DispatchController      : First order ID: ORD-DUPLICATE
+2026-02-16T17:27:36.214+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-1] c.f.dispatch.service.DispatchService     : Saving 1 orders to database
+2026-02-16T17:27:36.216+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-1] org.hibernate.SQL                        : 
+    /* select
+        count(*) 
+    from
+        DeliveryOrder x 
+    WHERE
+        x.orderId = :orderId */ select
+            count(*) 
+        from
+            delivery_orders do1_0 
+        where
+            do1_0.order_id=?
+Hibernate: 
+    /* select
+        count(*) 
+    from
+        DeliveryOrder x 
+    WHERE
+        x.orderId = :orderId */ select
+            count(*) 
+        from
+            delivery_orders do1_0 
+        where
+            do1_0.order_id=?
+2026-02-16T17:27:36.254+05:30 ERROR 5148 --- [dispatch-load-balancer] [o-auto-1-exec-1] c.f.dispatch.service.DispatchService     : Duplicate order ID detected: ORD-DUPLICATE
+2026-02-16T17:27:36.291+05:30 ERROR 5148 --- [dispatch-load-balancer] [o-auto-1-exec-1] c.f.d.exception.GlobalExceptionHandler   : DuplicateOrderException: Order with ID 'ORD-DUPLICATE' already exists in the system
+? Step 7 Complete: Duplicate detection working correctly
+2026-02-16T17:27:36.307+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0
+Hibernate: 
+    /* <criteria> */ select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0
+2026-02-16T17:27:36.348+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] org.hibernate.SQL                        : 
+    /* delete for com.freightfox.dispatch.model.entity.DeliveryOrder */delete 
+    from
+        delivery_orders 
+    where
+        order_id=?
+Hibernate: 
+    /* delete for com.freightfox.dispatch.model.entity.DeliveryOrder */delete 
+    from
+        delivery_orders 
+    where
+        order_id=?
+2026-02-16T17:27:36.416+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0
+Hibernate: 
+    /* <criteria> */ select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0
+2026-02-16T17:27:36.493+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-4] c.f.d.controller.DispatchController      : POST /api/dispatch/orders - Received 3 orders
+2026-02-16T17:27:36.493+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-4] c.f.d.controller.DispatchController      : First order ID: ORD-HEAVY-1
+2026-02-16T17:27:36.493+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-4] c.f.dispatch.service.DispatchService     : Saving 3 orders to database
+2026-02-16T17:27:36.496+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-4] org.hibernate.SQL                        : 
+    /* select
+        count(*) 
+    from
+        DeliveryOrder x 
+    WHERE
+        x.orderId = :orderId */ select
+            count(*) 
+        from
+            delivery_orders do1_0 
+        where
+            do1_0.order_id=?
+Hibernate: 
+    /* select
+        count(*) 
+    from
+        DeliveryOrder x 
+    WHERE
+        x.orderId = :orderId */ select
+            count(*) 
+        from
+            delivery_orders do1_0 
+        where
+            do1_0.order_id=?
+2026-02-16T17:27:36.533+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-4] org.hibernate.SQL                        : 
+    /* select
+        count(*) 
+    from
+        DeliveryOrder x 
+    WHERE
+        x.orderId = :orderId */ select
+            count(*) 
+        from
+            delivery_orders do1_0 
+        where
+            do1_0.order_id=?
+Hibernate: 
+    /* select
+        count(*) 
+    from
+        DeliveryOrder x 
+    WHERE
+        x.orderId = :orderId */ select
+            count(*) 
+        from
+            delivery_orders do1_0 
+        where
+            do1_0.order_id=?
+2026-02-16T17:27:36.568+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-4] org.hibernate.SQL                        : 
+    /* select
+        count(*) 
+    from
+        DeliveryOrder x 
+    WHERE
+        x.orderId = :orderId */ select
+            count(*) 
+        from
+            delivery_orders do1_0 
+        where
+            do1_0.order_id=?
+Hibernate: 
+    /* select
+        count(*) 
+    from
+        DeliveryOrder x 
+    WHERE
+        x.orderId = :orderId */ select
+            count(*) 
+        from
+            delivery_orders do1_0 
+        where
+            do1_0.order_id=?
+2026-02-16T17:27:36.606+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-4] org.hibernate.SQL                        : 
+    select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0 
+    where
+        do1_0.order_id=?
+Hibernate: 
+    select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0 
+    where
+        do1_0.order_id=?
+2026-02-16T17:27:36.638+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-4] org.hibernate.SQL                        : 
+    select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0 
+    where
+        do1_0.order_id=?
+Hibernate: 
+    select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0 
+    where
+        do1_0.order_id=?
+2026-02-16T17:27:36.670+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-4] org.hibernate.SQL                        : 
+    select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0 
+    where
+        do1_0.order_id=?
+Hibernate: 
+    select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0 
+    where
+        do1_0.order_id=?
+2026-02-16T17:27:36.704+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-4] c.f.dispatch.service.DispatchService     : Successfully saved 3 orders
+2026-02-16T17:27:36.706+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-4] org.hibernate.SQL                        : 
+    /* insert for
+        com.freightfox.dispatch.model.entity.DeliveryOrder */insert 
+    into
+        delivery_orders (address, created_at, latitude, longitude, package_weight, priority, updated_at, order_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    /* insert for
+        com.freightfox.dispatch.model.entity.DeliveryOrder */insert 
+    into
+        delivery_orders (address, created_at, latitude, longitude, package_weight, priority, updated_at, order_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-16T17:27:36.743+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-4] org.hibernate.SQL                        : 
+    /* insert for
+        com.freightfox.dispatch.model.entity.DeliveryOrder */insert 
+    into
+        delivery_orders (address, created_at, latitude, longitude, package_weight, priority, updated_at, order_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    /* insert for
+        com.freightfox.dispatch.model.entity.DeliveryOrder */insert 
+    into
+        delivery_orders (address, created_at, latitude, longitude, package_weight, priority, updated_at, order_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-16T17:27:36.774+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-4] org.hibernate.SQL                        : 
+    /* insert for
+        com.freightfox.dispatch.model.entity.DeliveryOrder */insert 
+    into
+        delivery_orders (address, created_at, latitude, longitude, package_weight, priority, updated_at, order_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    /* insert for
+        com.freightfox.dispatch.model.entity.DeliveryOrder */insert 
+    into
+        delivery_orders (address, created_at, latitude, longitude, package_weight, priority, updated_at, order_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-16T17:27:36.858+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-4] c.f.d.controller.DispatchController      : Orders saved successfully: Successfully saved 3 orders (3 HIGH, 0 MEDIUM, 0 LOW priority)
+2026-02-16T17:27:36.872+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-5] c.f.d.controller.DispatchController      : POST /api/dispatch/vehicles - Received 1 vehicles
+2026-02-16T17:27:36.872+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-5] c.f.d.controller.DispatchController      : First vehicle ID: VEH-SMALL
+2026-02-16T17:27:36.873+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-5] c.f.dispatch.service.DispatchService     : Saving 1 vehicles to database
+2026-02-16T17:27:36.874+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-5] org.hibernate.SQL                        : 
+    /* select
+        count(*) 
+    from
+        Vehicle x 
+    WHERE
+        x.vehicleId = :vehicleId */ select
+            count(*) 
+        from
+            vehicles v1_0 
+        where
+            v1_0.vehicle_id=?
+Hibernate: 
+    /* select
+        count(*) 
+    from
+        Vehicle x 
+    WHERE
+        x.vehicleId = :vehicleId */ select
+            count(*) 
+        from
+            vehicles v1_0 
+        where
+            v1_0.vehicle_id=?
+2026-02-16T17:27:36.904+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-5] org.hibernate.SQL                        : 
+    select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0 
+    where
+        v1_0.vehicle_id=?
+Hibernate: 
+    select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0 
+    where
+        v1_0.vehicle_id=?
+2026-02-16T17:27:36.939+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-5] c.f.dispatch.service.DispatchService     : Successfully saved 1 vehicles
+2026-02-16T17:27:36.940+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-5] org.hibernate.SQL                        : 
+    /* insert for
+        com.freightfox.dispatch.model.entity.Vehicle */insert 
+    into
+        vehicles (capacity, created_at, current_address, current_latitude, current_longitude, updated_at, vehicle_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    /* insert for
+        com.freightfox.dispatch.model.entity.Vehicle */insert 
+    into
+        vehicles (capacity, created_at, current_address, current_latitude, current_longitude, updated_at, vehicle_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+2026-02-16T17:27:37.004+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-5] c.f.d.controller.DispatchController      : Vehicles saved successfully: Successfully saved 1 vehicles (Total capacity: 10000 grams)
+2026-02-16T17:27:37.014+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-9] c.f.d.controller.DispatchController      : GET /api/dispatch/plan - Generating dispatch plan
+2026-02-16T17:27:37.014+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-9] c.f.dispatch.service.DispatchService     : Generating dispatch plan...
+2026-02-16T17:27:37.017+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-9] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0
+Hibernate: 
+    /* <criteria> */ select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0
+2026-02-16T17:27:37.057+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-9] c.f.dispatch.service.DispatchService     : Fetched 3 orders from database
+2026-02-16T17:27:37.057+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-9] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0
+Hibernate: 
+    /* <criteria> */ select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0
+2026-02-16T17:27:37.090+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-9] c.f.dispatch.service.DispatchService     : Fetched 1 vehicles from database
+2026-02-16T17:27:37.090+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-9] c.f.dispatch.service.DispatchService     : Capacity check: Orders = 21000 grams, Fleet = 10000 grams
+2026-02-16T17:27:37.090+05:30  WARN 5148 --- [dispatch-load-balancer] [o-auto-1-exec-9] c.f.dispatch.service.DispatchService     : WARNING: Total order weight (21000 g) exceeds total fleet capacity (10000 g). Some orders may not be assigned.
+2026-02-16T17:27:37.090+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-9] c.f.dispatch.service.DispatchService     : Running optimization algorithm...
+2026-02-16T17:27:37.090+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-9] c.f.dispatch.service.OptimizationEngine  : Starting dispatch optimization: 3 orders, 1 vehicles
+2026-02-16T17:27:37.090+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-9] c.f.dispatch.service.OptimizationEngine  : Orders sorted: 3 HIGH, 0 MEDIUM, 0 LOW priority
+2026-02-16T17:27:37.090+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-9] c.f.dispatch.service.OptimizationEngine  : Initialized 1 vehicle states
+2026-02-16T17:27:37.090+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-9] c.f.dispatch.service.OptimizationEngine  : Distance matrix built: 3 entries cached
+2026-02-16T17:27:37.090+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-9] c.f.dispatch.service.OptimizationEngine  : Processing order ORD-HEAVY-1: HIGH priority, 8000 grams
+2026-02-16T17:27:37.090+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-9] c.f.dispatch.service.OptimizationEngine  : ? Assigned order ORD-HEAVY-1 to vehicle VEH-SMALL (distance: {:.2f} km, load: 0.0/8000 grams)
+2026-02-16T17:27:37.092+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-9] c.f.dispatch.service.OptimizationEngine  : Processing order ORD-HEAVY-2: HIGH priority, 7000 grams
+2026-02-16T17:27:37.092+05:30  WARN 5148 --- [dispatch-load-balancer] [o-auto-1-exec-9] c.f.dispatch.service.OptimizationEngine  : ? Cannot assign order ORD-HEAVY-2: HIGH priority, 7000 grams - No vehicle with sufficient capacity
+2026-02-16T17:27:37.092+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-9] c.f.dispatch.service.OptimizationEngine  : Processing order ORD-HEAVY-3: HIGH priority, 6000 grams
+2026-02-16T17:27:37.092+05:30  WARN 5148 --- [dispatch-load-balancer] [o-auto-1-exec-9] c.f.dispatch.service.OptimizationEngine  : ? Cannot assign order ORD-HEAVY-3: HIGH priority, 6000 grams - No vehicle with sufficient capacity
+2026-02-16T17:27:37.092+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-9] c.f.dispatch.service.OptimizationEngine  : Assignment complete: 1 assigned, 2 unassigned
+2026-02-16T17:27:37.092+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-9] c.f.dispatch.service.OptimizationEngine  : Optimization complete: 1/3 orders assigned, 1 vehicles used
+2026-02-16T17:27:37.092+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-9] c.f.dispatch.service.DispatchService     : Dispatch plan generated: 1 vehicles used, 1/3 orders assigned
+2026-02-16T17:27:37.127+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-9] c.f.d.controller.DispatchController      : Dispatch plan generated: 1/3 orders assigned, 1 vehicles used
+? Step 8 Complete: Capacity constraints respected
+2026-02-16T17:27:37.136+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0
+Hibernate: 
+    /* <criteria> */ select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0
+2026-02-16T17:27:37.168+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] org.hibernate.SQL                        : 
+    /* delete for com.freightfox.dispatch.model.entity.DeliveryOrder */delete 
+    from
+        delivery_orders 
+    where
+        order_id=?
+Hibernate: 
+    /* delete for com.freightfox.dispatch.model.entity.DeliveryOrder */delete 
+    from
+        delivery_orders 
+    where
+        order_id=?
+2026-02-16T17:27:37.198+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] org.hibernate.SQL                        : 
+    /* delete for com.freightfox.dispatch.model.entity.DeliveryOrder */delete 
+    from
+        delivery_orders 
+    where
+        order_id=?
+Hibernate: 
+    /* delete for com.freightfox.dispatch.model.entity.DeliveryOrder */delete 
+    from
+        delivery_orders 
+    where
+        order_id=?
+2026-02-16T17:27:37.243+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] org.hibernate.SQL                        : 
+    /* delete for com.freightfox.dispatch.model.entity.DeliveryOrder */delete 
+    from
+        delivery_orders 
+    where
+        order_id=?
+Hibernate: 
+    /* delete for com.freightfox.dispatch.model.entity.DeliveryOrder */delete 
+    from
+        delivery_orders 
+    where
+        order_id=?
+2026-02-16T17:27:37.343+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0
+Hibernate: 
+    /* <criteria> */ select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0
+2026-02-16T17:27:37.379+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] org.hibernate.SQL                        : 
+    /* delete for com.freightfox.dispatch.model.entity.Vehicle */delete 
+    from
+        vehicles 
+    where
+        vehicle_id=?
+Hibernate: 
+    /* delete for com.freightfox.dispatch.model.entity.Vehicle */delete 
+    from
+        vehicles 
+    where
+        vehicle_id=?
+2026-02-16T17:27:37.456+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-6] c.f.d.controller.DispatchController      : GET /api/dispatch/health - Health check
+? Step 9 Complete: Health check passed
+2026-02-16T17:27:37.469+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0
+Hibernate: 
+    /* <criteria> */ select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0
+2026-02-16T17:27:37.540+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0
+Hibernate: 
+    /* <criteria> */ select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0
+
+=== Running Complete Workflow Test ===
+
+? Step 1: Submitting orders...
+2026-02-16T17:27:37.656+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-8] c.f.d.controller.DispatchController      : POST /api/dispatch/orders - Received 3 orders
+2026-02-16T17:27:37.656+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-8] c.f.d.controller.DispatchController      : First order ID: ORD-001
+2026-02-16T17:27:37.656+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-8] c.f.dispatch.service.DispatchService     : Saving 3 orders to database
+2026-02-16T17:27:37.656+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-8] org.hibernate.SQL                        : 
+    /* select
+        count(*) 
+    from
+        DeliveryOrder x 
+    WHERE
+        x.orderId = :orderId */ select
+            count(*) 
+        from
+            delivery_orders do1_0 
+        where
+            do1_0.order_id=?
+Hibernate: 
+    /* select
+        count(*) 
+    from
+        DeliveryOrder x 
+    WHERE
+        x.orderId = :orderId */ select
+            count(*) 
+        from
+            delivery_orders do1_0 
+        where
+            do1_0.order_id=?
+2026-02-16T17:27:37.698+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-8] org.hibernate.SQL                        : 
+    /* select
+        count(*) 
+    from
+        DeliveryOrder x 
+    WHERE
+        x.orderId = :orderId */ select
+            count(*) 
+        from
+            delivery_orders do1_0 
+        where
+            do1_0.order_id=?
+Hibernate: 
+    /* select
+        count(*) 
+    from
+        DeliveryOrder x 
+    WHERE
+        x.orderId = :orderId */ select
+            count(*) 
+        from
+            delivery_orders do1_0 
+        where
+            do1_0.order_id=?
+2026-02-16T17:27:37.738+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-8] org.hibernate.SQL                        : 
+    /* select
+        count(*) 
+    from
+        DeliveryOrder x 
+    WHERE
+        x.orderId = :orderId */ select
+            count(*) 
+        from
+            delivery_orders do1_0 
+        where
+            do1_0.order_id=?
+Hibernate: 
+    /* select
+        count(*) 
+    from
+        DeliveryOrder x 
+    WHERE
+        x.orderId = :orderId */ select
+            count(*) 
+        from
+            delivery_orders do1_0 
+        where
+            do1_0.order_id=?
+2026-02-16T17:27:37.772+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-8] org.hibernate.SQL                        : 
+    select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0 
+    where
+        do1_0.order_id=?
+Hibernate: 
+    select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0 
+    where
+        do1_0.order_id=?
+2026-02-16T17:27:37.807+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-8] org.hibernate.SQL                        : 
+    select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0 
+    where
+        do1_0.order_id=?
+Hibernate: 
+    select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0 
+    where
+        do1_0.order_id=?
+2026-02-16T17:27:37.845+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-8] org.hibernate.SQL                        : 
+    select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0 
+    where
+        do1_0.order_id=?
+Hibernate: 
+    select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0 
+    where
+        do1_0.order_id=?
+2026-02-16T17:27:37.890+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-8] c.f.dispatch.service.DispatchService     : Successfully saved 3 orders
+2026-02-16T17:27:37.898+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-8] org.hibernate.SQL                        : 
+    /* insert for
+        com.freightfox.dispatch.model.entity.DeliveryOrder */insert 
+    into
+        delivery_orders (address, created_at, latitude, longitude, package_weight, priority, updated_at, order_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    /* insert for
+        com.freightfox.dispatch.model.entity.DeliveryOrder */insert 
+    into
+        delivery_orders (address, created_at, latitude, longitude, package_weight, priority, updated_at, order_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-16T17:27:37.948+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-8] org.hibernate.SQL                        : 
+    /* insert for
+        com.freightfox.dispatch.model.entity.DeliveryOrder */insert 
+    into
+        delivery_orders (address, created_at, latitude, longitude, package_weight, priority, updated_at, order_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    /* insert for
+        com.freightfox.dispatch.model.entity.DeliveryOrder */insert 
+    into
+        delivery_orders (address, created_at, latitude, longitude, package_weight, priority, updated_at, order_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-16T17:27:37.990+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-8] org.hibernate.SQL                        : 
+    /* insert for
+        com.freightfox.dispatch.model.entity.DeliveryOrder */insert 
+    into
+        delivery_orders (address, created_at, latitude, longitude, package_weight, priority, updated_at, order_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    /* insert for
+        com.freightfox.dispatch.model.entity.DeliveryOrder */insert 
+    into
+        delivery_orders (address, created_at, latitude, longitude, package_weight, priority, updated_at, order_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-16T17:27:38.079+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-8] c.f.d.controller.DispatchController      : Orders saved successfully: Successfully saved 3 orders (2 HIGH, 1 MEDIUM, 0 LOW priority)
+2026-02-16T17:27:38.089+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0
+Hibernate: 
+    /* <criteria> */ select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0
+? Step 1 Complete: 3 orders saved to database
+? Step 2: Submitting vehicles...
+2026-02-16T17:27:38.171+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-7] c.f.d.controller.DispatchController      : POST /api/dispatch/vehicles - Received 2 vehicles
+2026-02-16T17:27:38.171+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-7] c.f.d.controller.DispatchController      : First vehicle ID: VEH-001
+2026-02-16T17:27:38.171+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-7] c.f.dispatch.service.DispatchService     : Saving 2 vehicles to database
+2026-02-16T17:27:38.172+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-7] org.hibernate.SQL                        : 
+    /* select
+        count(*) 
+    from
+        Vehicle x 
+    WHERE
+        x.vehicleId = :vehicleId */ select
+            count(*) 
+        from
+            vehicles v1_0 
+        where
+            v1_0.vehicle_id=?
+Hibernate: 
+    /* select
+        count(*) 
+    from
+        Vehicle x 
+    WHERE
+        x.vehicleId = :vehicleId */ select
+            count(*) 
+        from
+            vehicles v1_0 
+        where
+            v1_0.vehicle_id=?
+2026-02-16T17:27:38.209+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-7] org.hibernate.SQL                        : 
+    /* select
+        count(*) 
+    from
+        Vehicle x 
+    WHERE
+        x.vehicleId = :vehicleId */ select
+            count(*) 
+        from
+            vehicles v1_0 
+        where
+            v1_0.vehicle_id=?
+Hibernate: 
+    /* select
+        count(*) 
+    from
+        Vehicle x 
+    WHERE
+        x.vehicleId = :vehicleId */ select
+            count(*) 
+        from
+            vehicles v1_0 
+        where
+            v1_0.vehicle_id=?
+2026-02-16T17:27:38.243+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-7] org.hibernate.SQL                        : 
+    select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0 
+    where
+        v1_0.vehicle_id=?
+Hibernate: 
+    select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0 
+    where
+        v1_0.vehicle_id=?
+2026-02-16T17:27:38.276+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-7] org.hibernate.SQL                        : 
+    select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0 
+    where
+        v1_0.vehicle_id=?
+Hibernate: 
+    select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0 
+    where
+        v1_0.vehicle_id=?
+2026-02-16T17:27:38.314+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-7] c.f.dispatch.service.DispatchService     : Successfully saved 2 vehicles
+2026-02-16T17:27:38.317+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-7] org.hibernate.SQL                        : 
+    /* insert for
+        com.freightfox.dispatch.model.entity.Vehicle */insert 
+    into
+        vehicles (capacity, created_at, current_address, current_latitude, current_longitude, updated_at, vehicle_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    /* insert for
+        com.freightfox.dispatch.model.entity.Vehicle */insert 
+    into
+        vehicles (capacity, created_at, current_address, current_latitude, current_longitude, updated_at, vehicle_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+2026-02-16T17:27:38.348+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-7] org.hibernate.SQL                        : 
+    /* insert for
+        com.freightfox.dispatch.model.entity.Vehicle */insert 
+    into
+        vehicles (capacity, created_at, current_address, current_latitude, current_longitude, updated_at, vehicle_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    /* insert for
+        com.freightfox.dispatch.model.entity.Vehicle */insert 
+    into
+        vehicles (capacity, created_at, current_address, current_latitude, current_longitude, updated_at, vehicle_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+2026-02-16T17:27:38.433+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-7] c.f.d.controller.DispatchController      : Vehicles saved successfully: Successfully saved 2 vehicles (Total capacity: 22000 grams)
+2026-02-16T17:27:38.440+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0
+Hibernate: 
+    /* <criteria> */ select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0
+? Step 2 Complete: 2 vehicles saved to database
+? Step 3: Generating dispatch plan...
+2026-02-16T17:27:38.546+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-3] c.f.d.controller.DispatchController      : GET /api/dispatch/plan - Generating dispatch plan
+2026-02-16T17:27:38.546+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-3] c.f.dispatch.service.DispatchService     : Generating dispatch plan...
+2026-02-16T17:27:38.549+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-3] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0
+Hibernate: 
+    /* <criteria> */ select
+        do1_0.order_id,
+        do1_0.address,
+        do1_0.created_at,
+        do1_0.latitude,
+        do1_0.longitude,
+        do1_0.package_weight,
+        do1_0.priority,
+        do1_0.updated_at 
+    from
+        delivery_orders do1_0
+2026-02-16T17:27:38.596+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-3] c.f.dispatch.service.DispatchService     : Fetched 3 orders from database
+2026-02-16T17:27:38.599+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-3] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0
+Hibernate: 
+    /* <criteria> */ select
+        v1_0.vehicle_id,
+        v1_0.capacity,
+        v1_0.created_at,
+        v1_0.current_address,
+        v1_0.current_latitude,
+        v1_0.current_longitude,
+        v1_0.updated_at 
+    from
+        vehicles v1_0
+2026-02-16T17:27:38.633+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-3] c.f.dispatch.service.DispatchService     : Fetched 2 vehicles from database
+2026-02-16T17:27:38.635+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-3] c.f.dispatch.service.DispatchService     : Capacity check: Orders = 16000 grams, Fleet = 22000 grams
+2026-02-16T17:27:38.636+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-3] c.f.dispatch.service.DispatchService     : Running optimization algorithm...
+2026-02-16T17:27:38.636+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-3] c.f.dispatch.service.OptimizationEngine  : Starting dispatch optimization: 3 orders, 2 vehicles
+2026-02-16T17:27:38.636+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-3] c.f.dispatch.service.OptimizationEngine  : Orders sorted: 2 HIGH, 1 MEDIUM, 0 LOW priority
+2026-02-16T17:27:38.636+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-3] c.f.dispatch.service.OptimizationEngine  : Initialized 2 vehicle states
+2026-02-16T17:27:38.636+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-3] c.f.dispatch.service.OptimizationEngine  : Distance matrix built: 6 entries cached
+2026-02-16T17:27:38.636+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-3] c.f.dispatch.service.OptimizationEngine  : Processing order ORD-002: HIGH priority, 8000 grams
+2026-02-16T17:27:38.636+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-3] c.f.dispatch.service.OptimizationEngine  : ? Assigned order ORD-002 to vehicle VEH-002 (distance: {:.2f} km, load: 0.0/8000 grams)
+2026-02-16T17:27:38.636+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-3] c.f.dispatch.service.OptimizationEngine  : Processing order ORD-001: HIGH priority, 5000 grams
+2026-02-16T17:27:38.636+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-3] c.f.dispatch.service.OptimizationEngine  : ? Assigned order ORD-001 to vehicle VEH-001 (distance: {:.2f} km, load: 0.0/5000 grams)
+2026-02-16T17:27:38.636+05:30 DEBUG 5148 --- [dispatch-load-balancer] [o-auto-1-exec-3] c.f.dispatch.service.OptimizationEngine  : Processing order ORD-003: MEDIUM priority, 3000 grams
+2026-02-16T17:27:38.636+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-3] c.f.dispatch.service.OptimizationEngine  : ? Assigned order ORD-003 to vehicle VEH-001 (distance: {:.2f} km, load: 14.309966625580742/8000 grams)
+2026-02-16T17:27:38.636+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-3] c.f.dispatch.service.OptimizationEngine  : Assignment complete: 3 assigned, 0 unassigned
+2026-02-16T17:27:38.636+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-3] c.f.dispatch.service.OptimizationEngine  : Optimization complete: 3/3 orders assigned, 2 vehicles used
+2026-02-16T17:27:38.636+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-3] c.f.dispatch.service.DispatchService     : Dispatch plan generated: 2 vehicles used, 3/3 orders assigned
+2026-02-16T17:27:38.678+05:30  INFO 5148 --- [dispatch-load-balancer] [o-auto-1-exec-3] c.f.d.controller.DispatchController      : Dispatch plan generated: 3/3 orders assigned, 2 vehicles used
+
+=== Dispatch Plan Summary ===
+Total Orders: 3
+Assigned Orders: 3
+Unassigned Orders: 0
+Vehicles Used: 2/2
+Total Distance: 14.31 km
+Average Utilization: 73.3%
+
+=== Vehicle Assignments ===
+
+VEH-002:
+  Load: 8000 grams (66.7% utilization)
+  Distance: 0.00 km
+  Orders: 1
+    - ORD-002 (HIGH priority, 8000 grams, 0.00 km away)
+
+VEH-001:
+  Load: 8000 grams (80.0% utilization)
+  Distance: 14.31 km
+  Orders: 2
+    - ORD-001 (HIGH priority, 5000 grams, 0.00 km away)
+    - ORD-003 (MEDIUM priority, 3000 grams, 14.31 km away)
+
+? Step 10 Complete: Full workflow executed successfully
+
+=== All Integration Tests Passed! ===
+
+? Integration tests completed successfully!
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.18 s -- in com.freightfox.dispatch.integration.DispatchIntegrationTest
+[INFO] Running com.freightfox.dispatch.service.DispatchServiceTest
+2026-02-16T17:27:39.057+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.DispatchService     : DispatchService initialized with dependencies
+2026-02-16T17:27:39.061+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.DispatchService     : Generating dispatch plan...
+2026-02-16T17:27:39.061+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.DispatchService     : Fetched 2 orders from database
+2026-02-16T17:27:39.061+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.DispatchService     : Fetched 2 vehicles from database
+2026-02-16T17:27:39.061+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.DispatchService     : Capacity check: Orders = 8000 grams, Fleet = 25000 grams
+2026-02-16T17:27:39.061+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.DispatchService     : Running optimization algorithm...
+2026-02-16T17:27:39.065+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.DispatchService     : Dispatch plan generated: 1 vehicles used, 2/2 orders assigned
+2026-02-16T17:27:39.093+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.DispatchService     : DispatchService initialized with dependencies
+2026-02-16T17:27:39.096+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.DispatchService     : Saving 2 vehicles to database
+2026-02-16T17:27:39.096+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.DispatchService     : Successfully saved 2 vehicles
+2026-02-16T17:27:39.098+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.DispatchService     : DispatchService initialized with dependencies
+2026-02-16T17:27:39.102+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.DispatchService     : Saving 2 orders to database
+2026-02-16T17:27:39.102+05:30 ERROR 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.DispatchService     : Duplicate order ID detected: ORD-001
+2026-02-16T17:27:39.109+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.DispatchService     : DispatchService initialized with dependencies
+2026-02-16T17:27:39.113+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.DispatchService     : Saving 2 orders to database
+2026-02-16T17:27:39.118+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.DispatchService     : DispatchService initialized with dependencies
+2026-02-16T17:27:39.119+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.DispatchService     : Saving 2 orders to database
+2026-02-16T17:27:39.121+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.DispatchService     : Successfully saved 2 orders
+2026-02-16T17:27:39.127+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.DispatchService     : DispatchService initialized with dependencies
+2026-02-16T17:27:39.133+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.DispatchService     : Generating dispatch plan...
+2026-02-16T17:27:39.133+05:30 ERROR 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.DispatchService     : No orders found in database
+2026-02-16T17:27:39.138+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.DispatchService     : DispatchService initialized with dependencies
+2026-02-16T17:27:39.140+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.DispatchService     : Generating dispatch plan...
+2026-02-16T17:27:39.140+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.DispatchService     : Fetched 2 orders from database
+2026-02-16T17:27:39.140+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.DispatchService     : Fetched 2 vehicles from database
+2026-02-16T17:27:39.140+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.DispatchService     : Capacity check: Orders = 8000 grams, Fleet = 25000 grams
+2026-02-16T17:27:39.140+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.DispatchService     : Running optimization algorithm...
+2026-02-16T17:27:39.140+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.DispatchService     : Dispatch plan generated: 1 vehicles used, 2/2 orders assigned
+2026-02-16T17:27:39.144+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.DispatchService     : DispatchService initialized with dependencies
+2026-02-16T17:27:39.145+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.DispatchService     : Saving 2 orders to database
+2026-02-16T17:27:39.145+05:30 ERROR 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.DispatchService     : Duplicate order IDs found in request
+2026-02-16T17:27:39.148+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.DispatchService     : DispatchService initialized with dependencies
+2026-02-16T17:27:39.149+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.DispatchService     : Generating dispatch plan...
+2026-02-16T17:27:39.149+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.DispatchService     : Fetched 2 orders from database
+2026-02-16T17:27:39.150+05:30 ERROR 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.DispatchService     : No vehicles found in database
+2026-02-16T17:27:39.153+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.DispatchService     : DispatchService initialized with dependencies
+2026-02-16T17:27:39.155+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.DispatchService     : Saving 2 vehicles to database
+2026-02-16T17:27:39.155+05:30 ERROR 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.DispatchService     : Duplicate vehicle ID detected: VEH-001
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.444 s -- in com.freightfox.dispatch.service.DispatchServiceTest
+[INFO] Running com.freightfox.dispatch.service.OptimizationEngineTest
+2026-02-16T17:27:39.161+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Starting dispatch optimization: 2 orders, 1 vehicles
+2026-02-16T17:27:39.163+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Orders sorted: 2 HIGH, 0 MEDIUM, 0 LOW priority
+2026-02-16T17:27:39.164+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Initialized 1 vehicle states
+2026-02-16T17:27:39.164+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Distance matrix built: 2 entries cached
+2026-02-16T17:27:39.164+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Processing order ORD-001: HIGH priority, 5000 grams
+2026-02-16T17:27:39.164+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : ? Assigned order ORD-001 to vehicle VEH-001 (distance: {:.2f} km, load: 0.0/5000 grams)
+2026-02-16T17:27:39.164+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Processing order ORD-002: HIGH priority, 3000 grams
+2026-02-16T17:27:39.164+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : ? Assigned order ORD-002 to vehicle VEH-001 (distance: {:.2f} km, load: 1.4796785153012728/8000 grams)
+2026-02-16T17:27:39.164+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Assignment complete: 2 assigned, 0 unassigned
+2026-02-16T17:27:39.165+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Optimization complete: 2/2 orders assigned, 1 vehicles used
+2026-02-16T17:27:39.172+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Starting dispatch optimization: 1 orders, 2 vehicles
+2026-02-16T17:27:39.172+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Orders sorted: 1 HIGH, 0 MEDIUM, 0 LOW priority
+2026-02-16T17:27:39.172+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Initialized 2 vehicle states
+2026-02-16T17:27:39.172+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Distance matrix built: 2 entries cached
+2026-02-16T17:27:39.172+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Processing order ORD-HEAVY: HIGH priority, 50000 grams
+2026-02-16T17:27:39.172+05:30  WARN 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : ? Cannot assign order ORD-HEAVY: HIGH priority, 50000 grams - No vehicle with sufficient capacity
+2026-02-16T17:27:39.172+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Assignment complete: 0 assigned, 1 unassigned
+2026-02-16T17:27:39.172+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Optimization complete: 0/1 orders assigned, 0 vehicles used
+2026-02-16T17:27:39.174+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Starting dispatch optimization: 3 orders, 1 vehicles
+2026-02-16T17:27:39.174+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Orders sorted: 1 HIGH, 1 MEDIUM, 1 LOW priority
+2026-02-16T17:27:39.174+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Initialized 1 vehicle states
+2026-02-16T17:27:39.174+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Distance matrix built: 3 entries cached
+2026-02-16T17:27:39.174+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Processing order ORD-HIGH: HIGH priority, 2000 grams
+2026-02-16T17:27:39.175+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : ? Assigned order ORD-HIGH to vehicle VEH-001 (distance: {:.2f} km, load: 1.4796785153012728/2000 grams)
+2026-02-16T17:27:39.175+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Processing order ORD-MED: MEDIUM priority, 2000 grams
+2026-02-16T17:27:39.175+05:30  WARN 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : ? Cannot assign order ORD-MED: MEDIUM priority, 2000 grams - No vehicle with sufficient capacity
+2026-02-16T17:27:39.175+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Processing order ORD-LOW: LOW priority, 2000 grams
+2026-02-16T17:27:39.175+05:30  WARN 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : ? Cannot assign order ORD-LOW: LOW priority, 2000 grams - No vehicle with sufficient capacity
+2026-02-16T17:27:39.175+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Assignment complete: 1 assigned, 2 unassigned
+2026-02-16T17:27:39.175+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Optimization complete: 1/3 orders assigned, 1 vehicles used
+2026-02-16T17:27:39.182+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Starting dispatch optimization: 1 orders, 2 vehicles
+2026-02-16T17:27:39.182+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Orders sorted: 1 HIGH, 0 MEDIUM, 0 LOW priority
+2026-02-16T17:27:39.182+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Initialized 2 vehicle states
+2026-02-16T17:27:39.182+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Distance matrix built: 2 entries cached
+2026-02-16T17:27:39.182+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Processing order ORD-001: HIGH priority, 3000 grams
+2026-02-16T17:27:39.182+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : ? Assigned order ORD-001 to vehicle VEH-NEAR (distance: {:.2f} km, load: 1.4796785153012728/3000 grams)
+2026-02-16T17:27:39.182+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Assignment complete: 1 assigned, 0 unassigned
+2026-02-16T17:27:39.182+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Optimization complete: 1/1 orders assigned, 1 vehicles used
+2026-02-16T17:27:39.186+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Starting dispatch optimization: 2 orders, 1 vehicles
+2026-02-16T17:27:39.186+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Orders sorted: 2 HIGH, 0 MEDIUM, 0 LOW priority
+2026-02-16T17:27:39.186+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Initialized 1 vehicle states
+2026-02-16T17:27:39.186+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Distance matrix built: 2 entries cached
+2026-02-16T17:27:39.186+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Processing order ORD-001: HIGH priority, 8000 grams
+2026-02-16T17:27:39.186+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : ? Assigned order ORD-001 to vehicle VEH-001 (distance: {:.2f} km, load: 0.0/8000 grams)
+2026-02-16T17:27:39.186+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Processing order ORD-002: HIGH priority, 5000 grams
+2026-02-16T17:27:39.186+05:30  WARN 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : ? Cannot assign order ORD-002: HIGH priority, 5000 grams - No vehicle with sufficient capacity
+2026-02-16T17:27:39.186+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Assignment complete: 1 assigned, 1 unassigned
+2026-02-16T17:27:39.186+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Optimization complete: 1/2 orders assigned, 1 vehicles used
+2026-02-16T17:27:39.188+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Starting dispatch optimization: 1 orders, 2 vehicles
+2026-02-16T17:27:39.188+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Orders sorted: 1 HIGH, 0 MEDIUM, 0 LOW priority
+2026-02-16T17:27:39.188+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Initialized 2 vehicle states
+2026-02-16T17:27:39.188+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Distance matrix built: 2 entries cached
+2026-02-16T17:27:39.188+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Processing order ORD-001: HIGH priority, 8000 grams
+2026-02-16T17:27:39.188+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : ? Assigned order ORD-001 to vehicle VEH-FAR (distance: {:.2f} km, load: 36.75232292021397/8000 grams)
+2026-02-16T17:27:39.190+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Assignment complete: 1 assigned, 0 unassigned
+2026-02-16T17:27:39.190+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Optimization complete: 1/1 orders assigned, 1 vehicles used
+2026-02-16T17:27:39.190+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Starting dispatch optimization: 5 orders, 1 vehicles
+2026-02-16T17:27:39.190+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Orders sorted: 2 HIGH, 1 MEDIUM, 2 LOW priority
+2026-02-16T17:27:39.190+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Initialized 1 vehicle states
+2026-02-16T17:27:39.191+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Distance matrix built: 5 entries cached
+2026-02-16T17:27:39.191+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Processing order ORD-002: HIGH priority, 1000 grams
+2026-02-16T17:27:39.191+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : ? Assigned order ORD-002 to vehicle VEH-001 (distance: {:.2f} km, load: 1.4796785153012728/1000 grams)
+2026-02-16T17:27:39.191+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Processing order ORD-004: HIGH priority, 1000 grams
+2026-02-16T17:27:39.191+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : ? Assigned order ORD-004 to vehicle VEH-001 (distance: {:.2f} km, load: 4.438851575366196/2000 grams)
+2026-02-16T17:27:39.191+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Processing order ORD-003: MEDIUM priority, 1000 grams
+2026-02-16T17:27:39.191+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : ? Assigned order ORD-003 to vehicle VEH-001 (distance: {:.2f} km, load: 2.9592957146419963/3000 grams)
+2026-02-16T17:27:39.191+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Processing order ORD-001: LOW priority, 1000 grams
+2026-02-16T17:27:39.191+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : ? Assigned order ORD-001 to vehicle VEH-001 (distance: {:.2f} km, load: 0.0/4000 grams)
+2026-02-16T17:27:39.191+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Processing order ORD-005: LOW priority, 1000 grams
+2026-02-16T17:27:39.191+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : ? Assigned order ORD-005 to vehicle VEH-001 (distance: {:.2f} km, load: 5.918346074817469/5000 grams)
+2026-02-16T17:27:39.191+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Assignment complete: 5 assigned, 0 unassigned
+2026-02-16T17:27:39.192+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Optimization complete: 5/5 orders assigned, 1 vehicles used
+2026-02-16T17:27:39.194+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Starting dispatch optimization: 1 orders, 0 vehicles
+2026-02-16T17:27:39.194+05:30 ERROR 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : No vehicles available for assignment
+2026-02-16T17:27:39.196+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Starting dispatch optimization: 2 orders, 1 vehicles
+2026-02-16T17:27:39.196+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Orders sorted: 2 HIGH, 0 MEDIUM, 0 LOW priority
+2026-02-16T17:27:39.196+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Initialized 1 vehicle states
+2026-02-16T17:27:39.196+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Distance matrix built: 2 entries cached
+2026-02-16T17:27:39.196+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Processing order ORD-001: HIGH priority, 2000 grams
+2026-02-16T17:27:39.196+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : ? Assigned order ORD-001 to vehicle VEH-001 (distance: {:.2f} km, load: 0.0/2000 grams)
+2026-02-16T17:27:39.196+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Processing order ORD-002: HIGH priority, 2000 grams
+2026-02-16T17:27:39.196+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : ? Assigned order ORD-002 to vehicle VEH-001 (distance: {:.2f} km, load: 14.794023215693825/4000 grams)
+2026-02-16T17:27:39.196+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Assignment complete: 2 assigned, 0 unassigned
+2026-02-16T17:27:39.196+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Optimization complete: 2/2 orders assigned, 1 vehicles used
+2026-02-16T17:27:39.198+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Starting dispatch optimization: 3 orders, 2 vehicles
+2026-02-16T17:27:39.198+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Orders sorted: 3 HIGH, 0 MEDIUM, 0 LOW priority
+2026-02-16T17:27:39.198+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Initialized 2 vehicle states
+2026-02-16T17:27:39.198+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Distance matrix built: 6 entries cached
+2026-02-16T17:27:39.198+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Processing order ORD-001: HIGH priority, 5000 grams
+2026-02-16T17:27:39.198+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : ? Assigned order ORD-001 to vehicle VEH-001 (distance: {:.2f} km, load: 0.0/5000 grams)
+2026-02-16T17:27:39.198+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Processing order ORD-002: HIGH priority, 5000 grams
+2026-02-16T17:27:39.198+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : ? Assigned order ORD-002 to vehicle VEH-001 (distance: {:.2f} km, load: 1.4796785153012728/10000 grams)
+2026-02-16T17:27:39.198+05:30 DEBUG 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Processing order ORD-003: HIGH priority, 5000 grams
+2026-02-16T17:27:39.198+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : ? Assigned order ORD-003 to vehicle VEH-002 (distance: {:.2f} km, load: 4.4384835706706784/5000 grams)
+2026-02-16T17:27:39.200+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Assignment complete: 3 assigned, 0 unassigned
+2026-02-16T17:27:39.200+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Optimization complete: 3/3 orders assigned, 2 vehicles used
+2026-02-16T17:27:39.202+05:30  INFO 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : Starting dispatch optimization: 0 orders, 1 vehicles
+2026-02-16T17:27:39.202+05:30  WARN 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.service.OptimizationEngine  : No orders to assign
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.043 s -- in com.freightfox.dispatch.service.OptimizationEngineTest
+[INFO] Running com.freightfox.dispatch.util.HaversineCalculatorTest
+2026-02-16T17:27:39.288+05:30 ERROR 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.util.HaversineCalculator    : Starting point longitude 181.0000 is out of range [-180, 180]
+2026-02-16T17:27:39.293+05:30 ERROR 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.util.HaversineCalculator    : Starting point longitude -181.0000 is out of range [-180, 180]
+2026-02-16T17:27:39.296+05:30 ERROR 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.util.HaversineCalculator    : Ending point longitude 200.0000 is out of range [-180, 180]
+2026-02-16T17:27:39.298+05:30 ERROR 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.util.HaversineCalculator    : Ending point longitude -200.0000 is out of range [-180, 180]
+2026-02-16T17:27:39.316+05:30 ERROR 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.util.HaversineCalculator    : Starting point latitude 91.0000 is out of range [-90, 90]
+2026-02-16T17:27:39.318+05:30 ERROR 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.util.HaversineCalculator    : Starting point latitude -91.0000 is out of range [-90, 90]
+2026-02-16T17:27:39.320+05:30 ERROR 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.util.HaversineCalculator    : Ending point latitude 100.0000 is out of range [-90, 90]
+2026-02-16T17:27:39.322+05:30 ERROR 5148 --- [dispatch-load-balancer] [           main] c.f.dispatch.util.HaversineCalculator    : Ending point latitude -100.0000 is out of range [-90, 90]
+[INFO] Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.114 s -- in com.freightfox.dispatch.util.HaversineCalculatorTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 60, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  28.896 s
+[INFO] Finished at: 2026-02-16T17:27:40+05:30
+[INFO] ------------------------------------------------------------------------

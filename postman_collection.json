@@ -1,0 +1,165 @@
+{
+  "info": {
+    "name": "Dispatch Load Balancer API",
+    "description": "Complete API collection for testing Dispatch Load Balancer endpoints with sample data from Delhi NCR region",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "version": "1.0.0"
+  },
+  "item": [
+    {
+      "name": "1. Submit Orders (10 Orders - Delhi NCR)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/dispatch/orders",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "dispatch", "orders"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"orders\": [\n    {\n      \"orderId\": \"ORD-001\",\n      \"latitude\": 28.6139,\n      \"longitude\": 77.2090,\n      \"address\": \"Connaught Place, New Delhi, Delhi, India\",\n      \"packageWeight\": 5000,\n      \"priority\": \"HIGH\"\n    },\n    {\n      \"orderId\": \"ORD-002\",\n      \"latitude\": 28.5355,\n      \"longitude\": 77.3910,\n      \"address\": \"Sector 18, Noida, Uttar Pradesh, India\",\n      \"packageWeight\": 8000,\n      \"priority\": \"HIGH\"\n    },\n    {\n      \"orderId\": \"ORD-003\",\n      \"latitude\": 28.7041,\n      \"longitude\": 77.1025,\n      \"address\": \"Rohini Sector 7, Delhi, India\",\n      \"packageWeight\": 3000,\n      \"priority\": \"MEDIUM\"\n    },\n    {\n      \"orderId\": \"ORD-004\",\n      \"latitude\": 28.4595,\n      \"longitude\": 77.0266,\n      \"address\": \"Cyber City, Gurugram, Haryana, India\",\n      \"packageWeight\": 6000,\n      \"priority\": \"HIGH\"\n    },\n    {\n      \"orderId\": \"ORD-005\",\n      \"latitude\": 28.6692,\n      \"longitude\": 77.4538,\n      \"address\": \"Indirapuram, Ghaziabad, Uttar Pradesh, India\",\n      \"packageWeight\": 4000,\n      \"priority\": \"MEDIUM\"\n    },\n    {\n      \"orderId\": \"ORD-006\",\n      \"latitude\": 28.4089,\n      \"longitude\": 77.3178,\n      \"address\": \"Greater Noida, Uttar Pradesh, India\",\n      \"packageWeight\": 7000,\n      \"priority\": \"LOW\"\n    },\n    {\n      \"orderId\": \"ORD-007\",\n      \"latitude\": 28.6304,\n      \"longitude\": 77.2177,\n      \"address\": \"Karol Bagh, New Delhi, Delhi, India\",\n      \"packageWeight\": 2000,\n      \"priority\": \"MEDIUM\"\n    },\n    {\n      \"orderId\": \"ORD-008\",\n      \"latitude\": 28.5494,\n      \"longitude\": 77.2501,\n      \"address\": \"Lajpat Nagar, New Delhi, Delhi, India\",\n      \"packageWeight\": 5500,\n      \"priority\": \"HIGH\"\n    },\n    {\n      \"orderId\": \"ORD-009\",\n      \"latitude\": 28.5672,\n      \"longitude\": 77.3227,\n      \"address\": \"Mayur Vihar Phase 2, Delhi, India\",\n      \"packageWeight\": 3500,\n      \"priority\": \"LOW\"\n    },\n    {\n      \"orderId\": \"ORD-010\",\n      \"latitude\": 28.6517,\n      \"longitude\": 77.2219,\n      \"address\": \"Paharganj, New Delhi, Delhi, India\",\n      \"packageWeight\": 4500,\n      \"priority\": \"MEDIUM\"\n    }\n  ]\n}"
+        },
+        "description": "Submit 10 delivery orders from various locations in Delhi NCR region with mixed priorities"
+      },
+      "response": [
+        {
+          "name": "Success Response",
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"message\": \"Successfully saved 10 orders (4 HIGH, 4 MEDIUM, 2 LOW priority)\",\n  \"status\": \"SUCCESS\",\n  \"timestamp\": \"2024-02-15T14:30:00.123\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "2. Submit Vehicles (3 Vehicles - Delhi Hubs)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/dispatch/vehicles",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "dispatch", "vehicles"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"vehicles\": [\n    {\n      \"vehicleId\": \"VEH-001\",\n      \"capacity\": 15000,\n      \"currentLatitude\": 28.6139,\n      \"currentLongitude\": 77.2090,\n      \"currentAddress\": \"Delhi Central Hub, Connaught Place, New Delhi\"\n    },\n    {\n      \"vehicleId\": \"VEH-002\",\n      \"capacity\": 18000,\n      \"currentLatitude\": 28.5355,\n      \"currentLongitude\": 77.3910,\n      \"currentAddress\": \"Noida Distribution Center, Sector 18, Noida\"\n    },\n    {\n      \"vehicleId\": \"VEH-003\",\n      \"capacity\": 12000,\n      \"currentLatitude\": 28.4595,\n      \"currentLongitude\": 77.0266,\n      \"currentAddress\": \"Gurugram Hub, Cyber City, Gurugram\"\n    }\n  ]\n}"
+        },
+        "description": "Submit 3 delivery vehicles stationed at major hubs in Delhi NCR"
+      },
+      "response": [
+        {
+          "name": "Success Response",
+          "status": "OK",
+          "code": 200,
+          "body": "{\n  \"message\": \"Successfully saved 3 vehicles (Total capacity: 45000 grams)\",\n  \"status\": \"SUCCESS\",\n  \"timestamp\": \"2024-02-15T14:30:05.456\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "3. Get Dispatch Plan",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/dispatch/plan",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "dispatch", "plan"]
+        },
+        "description": "Generate optimized dispatch plan based on submitted orders and vehicles"
+      },
+      "response": [
+        {
+          "name": "Success Response",
+          "status": "OK",
+          "code": 200,
+          "body": "{\n  \"message\": \"Dispatch plan generated successfully\",\n  \"status\": \"SUCCESS\",\n  \"dispatchPlan\": [\n    {\n      \"vehicleId\": \"VEH-001\",\n      \"totalLoad\": 14500,\n      \"totalDistance\": \"8.45 km\",\n      \"utilizationPercentage\": 96.7,\n      \"orderCount\": 3,\n      \"assignedOrders\": [\n        {\n          \"orderId\": \"ORD-001\",\n          \"address\": \"Connaught Place, New Delhi, Delhi, India\",\n          \"packageWeight\": 5000,\n          \"priority\": \"HIGH\",\n          \"distanceFromVehicle\": \"0.00 km\"\n        },\n        {\n          \"orderId\": \"ORD-008\",\n          \"address\": \"Lajpat Nagar, New Delhi, Delhi, India\",\n          \"packageWeight\": 5500,\n          \"priority\": \"HIGH\",\n          \"distanceFromVehicle\": \"5.20 km\"\n        },\n        {\n          \"orderId\": \"ORD-010\",\n          \"address\": \"Paharganj, New Delhi, Delhi, India\",\n          \"packageWeight\": 4000,\n          \"priority\": \"MEDIUM\",\n          \"distanceFromVehicle\": \"1.85 km\"\n        }\n      ]\n    },\n    {\n      \"vehicleId\": \"VEH-002\",\n      \"totalLoad\": 15000,\n      \"totalDistance\": \"15.30 km\",\n      \"utilizationPercentage\": 83.3,\n      \"orderCount\": 2,\n      \"assignedOrders\": [\n        {\n          \"orderId\": \"ORD-002\",\n          \"address\": \"Sector 18, Noida, Uttar Pradesh, India\",\n          \"packageWeight\": 8000,\n          \"priority\": \"HIGH\",\n          \"distanceFromVehicle\": \"0.00 km\"\n        },\n        {\n          \"orderId\": \"ORD-006\",\n          \"address\": \"Greater Noida, Uttar Pradesh, India\",\n          \"packageWeight\": 7000,\n          \"priority\": \"LOW\",\n          \"distanceFromVehicle\": \"15.30 km\"\n        }\n      ]\n    },\n    {\n      \"vehicleId\": \"VEH-003\",\n      \"totalLoad\": 6000,\n      \"totalDistance\": \"0.00 km\",\n      \"utilizationPercentage\": 50.0,\n      \"orderCount\": 1,\n      \"assignedOrders\": [\n        {\n          \"orderId\": \"ORD-004\",\n          \"address\": \"Cyber City, Gurugram, Haryana, India\",\n          \"packageWeight\": 6000,\n          \"priority\": \"HIGH\",\n          \"distanceFromVehicle\": \"0.00 km\"\n        }\n      ]\n    }\n  ],\n  \"summary\": {\n    \"totalOrders\": 10,\n    \"assignedOrders\": 6,\n    \"unassignedOrders\": 4,\n    \"totalVehicles\": 3,\n    \"usedVehicles\": 3,\n    \"totalDistanceCovered\": \"23.75 km\",\n    \"averageUtilization\": 76.7\n  }\n}"
+        }
+      ]
+    },
+    {
+      "name": "4. Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/dispatch/health",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "dispatch", "health"]
+        },
+        "description": "Verify API is running"
+      },
+      "response": [
+        {
+          "name": "Success Response",
+          "status": "OK",
+          "code": 200,
+          "body": "{\n  \"message\": \"Dispatch API is running\",\n  \"status\": \"SUCCESS\",\n  \"timestamp\": \"2024-02-15T14:30:10.789\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "5. Clear Orders (Testing Only)",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/dispatch/orders",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "dispatch", "orders"]
+        },
+        "description": "Clear all orders from database (use only for testing)"
+      },
+      "response": []
+    },
+    {
+      "name": "6. Clear Vehicles (Testing Only)",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/dispatch/vehicles",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "dispatch", "vehicles"]
+        },
+        "description": "Clear all vehicles from database (use only for testing)"
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080/api/dispatch",
+      "type": "string"
+    }
+  ]
+}
