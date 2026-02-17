@@ -86,5 +86,3 @@ The Dispatch Load Balancer API accepts delivery orders and vehicle fleet data, t
 - **SLF4J + Logback** - Logging
 
 ---
-
-## 🏗️ Architecture
