@@ -6,9 +6,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-/**
- * VehicleDTO - Individual Delivery Vehicle
- */
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -20,15 +18,13 @@ public class VehicleDTO {
         regexp = "^[A-Z0-9-]+$",
         message = "Vehicle ID must contain only uppercase letters, numbers, and hyphens"
     )
-    // Format examples: "VEH-001", "TRUCK-DL-1234"
+    
     private String vehicleId;
 
     @NotNull(message = "Capacity is required")
     @Min(value = 1000, message = "Capacity must be at least 1000 grams (1 kg)")
     @Max(value = 50000000, message = "Capacity cannot exceed 50,000 kg")
-    // Realistic vehicle capacity range
-    // Min: Small bike courier (1 kg)
-    // Max: Large truck (50,000 kg)
+    
     private Integer capacity;
 
     @NotNull(message = "Current latitude is required")
@@ -62,7 +58,6 @@ public class VehicleDTO {
         max = 500,
         message = "Current address must be between 10 and 500 characters"
     )
-    // Made optional with @Size instead of @NotBlank
-    // Some vehicles might not have address, only coordinates
+    
     private String currentAddress;
 }

@@ -1,49 +1,46 @@
-# Test Profile Configuration (in-memory H2 database)
+
 
 spring:
   application:
     name: dispatch-load-balancer-test
   
-  # H2 In-Memory Database Configuration
+ 
   datasource:
     url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
-    # jdbc:h2:mem:testdb → In-memory database named "testdb"
-    # DB_CLOSE_DELAY=-1 → Keep database open until JVM shuts down
-    # DB_CLOSE_ON_EXIT=FALSE → Don't close on last connection close
+   
     
     driver-class-name: org.h2.Driver
     username: sa
     password: 
     
-    # HikariCP connection pool settings (optimized for tests)
+    
     hikari:
       maximum-pool-size: 5
       minimum-idle: 2
       connection-timeout: 10000
   
-  # JPA/Hibernate Configuration for H2
+  
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
     
     hibernate:
       ddl-auto: create-drop
-      # create-drop: Creates schema at start, drops at end
-      # Perfect for tests - fresh database each time
+      
     
-    show-sql: true  # Log SQL statements (helpful for debugging tests)
+    show-sql: true  
     
     properties:
       hibernate:
-        format_sql: true  # Pretty-print SQL
-        use_sql_comments: true  # Add comments to SQL
+        format_sql: true  
+        use_sql_comments: true  
   
-  # H2 Console (optional - useful for debugging)
+  
   h2:
     console:
       enabled: true
       path: /h2-console
 
-# Logging Configuration for Tests
+
 logging:
   level:
     com.freightfox.dispatch: DEBUG
@@ -51,6 +48,6 @@ logging:
     org.hibernate.SQL: DEBUG
     org.hibernate.type.descriptor.sql.BasicBinder: TRACE
 
-# Server Configuration
+
 server:
-  port: 0  # Random port (will be injected via @LocalServerPort)
+  port: 0  

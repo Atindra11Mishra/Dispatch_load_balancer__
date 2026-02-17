@@ -1,8 +1,6 @@
 package com.freightfox.dispatch.exception;
 
-/**
- * NoVehiclesException - Thrown when no vehicles are available for dispatch
- */
+
 public class NoVehiclesException extends RuntimeException {
     
     public NoVehiclesException() {

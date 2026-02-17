@@ -10,17 +10,7 @@ import lombok.NoArgsConstructor;
 
 import java.util.List;
 
-/**
- * VehicleRequestDTO - Wrapper for batch vehicle submissions
- * 
- * POST /api/dispatch/vehicles
- * {
- *   "vehicles": [
- *     { "vehicleId": "VEH-001", ... },
- *     { "vehicleId": "VEH-002", ... }
- *   ]
- * }
- */
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -33,9 +23,9 @@ public class VehicleRequestDTO {
         max = 50,
         message = "Must submit between 1 and 50 vehicles at once"
     )
-    // Smaller batch size than orders - fleet is usually smaller
+    
     
     @Valid
-    // Validates each VehicleDTO in the list
+    
     private List<VehicleDTO> vehicles;
 }

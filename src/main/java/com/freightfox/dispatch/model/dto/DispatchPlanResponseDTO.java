@@ -7,20 +7,7 @@ import lombok.NoArgsConstructor;
 
 import java.util.List;
 
-/**
- * DispatchPlanResponseDTO - Complete dispatch optimization result
- * 
- * GET /api/dispatch/plan
- * {
- *   "message": "Dispatch plan generated successfully",
- *   "status": "SUCCESS",
- *   "dispatchPlan": [
- *     { "vehicleId": "VEH-001", "totalLoad": 15000, ... },
- *     { "vehicleId": "VEH-002", "totalLoad": 12000, ... }
- *   ],
- *   "summary": { ... }
- * }
- */
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

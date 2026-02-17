@@ -1,22 +1,22 @@
-# Server Configuration (like PORT in .env)
+
 server:
   port: 8080
   servlet:
     context-path: /api
 
-# Spring Application Settings
+
 spring:
   application:
     name: dispatch-load-balancer
   
-  # Database Configuration (Supabase PostgreSQL)
+  
   datasource:
     url: jdbc:postgresql://aws-1-ap-south-1.pooler.supabase.com:5432/postgres
     username: postgres.phnfqaczlfqjqdqbwfrf
     password: residire_123
     driver-class-name: org.postgresql.Driver
     
-    # Connection Pool Settings (like MongoDB connection pooling)
+    
     hikari:
       maximum-pool-size: 10
       minimum-idle: 5
@@ -24,25 +24,21 @@ spring:
       idle-timeout: 600000
       max-lifetime: 1800000
   
-  # JPA/Hibernate Settings (ORM Configuration)
+  
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
-      # ddl-auto options:
-      # - create: Drop and recreate tables (DANGER in production!)
-      # - update: Add new columns/tables (safe for dev)
-      # - validate: Just check schema matches entities
-      # - none: Do nothing
+      
       ddl-auto: update
     
-    # Show SQL queries in console (like Mongoose debug mode)
+    
     show-sql: true
     properties:
       hibernate:
         format_sql: true
         use_sql_comments: true
 
-# API Documentation (Swagger)
+
 springdoc:
   api-docs:
     path: /api-docs
@@ -50,13 +46,10 @@ springdoc:
     path: /swagger-ui.html
     operations-sorter: method
 
-# Logging Configuration
+
 logging:
   level:
     com.freightfox.dispatch: DEBUG
     org.springframework.web: INFO
     org.hibernate.SQL: DEBUG
     org.hibernate.type.descriptor.sql.BasicBinder: TRACE
-
-# Supabase Connection String Format:
-# jdbc:postgresql://db.<your-project-ref>.supabase.co:5432/<your-database-name>

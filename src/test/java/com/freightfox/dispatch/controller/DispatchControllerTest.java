@@ -24,91 +24,67 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 /**
- * Controller tests for DispatchController
+ * 
  * 
  * @WebMvcTest:
- * - Lightweight controller testing
- * - Only loads controller layer (not full Spring context)
- * - Auto-configures MockMvc
- * - Does NOT load @Service, @Repository, @Component beans
- * - Use @MockBean to mock dependencies
+
  * 
- * MockMvc:
- * - Simulates HTTP requests without starting server
- * - Like: supertest in Express.js
- * - Performs request → controller → response
- * - Verifies status codes, headers, JSON response
- * 
- * @WebMvcTest vs @SpringBootTest:
+ * @WebMvcTest
  * 
  * @WebMvcTest:
- * - Fast (only web layer)
- * - Isolated (mock dependencies)
- * - No database, no real services
- * - Use for: Controller logic, validation, error handling
+ * -
  * 
  * @SpringBootTest:
- * - Slow (full application context)
- * - Integration (real beans)
- * - Real database, real services
- * - Use for: End-to-end testing, integration tests
+ * 
  */
 @WebMvcTest(DispatchController.class)
 @DisplayName("DispatchController - REST API Tests")
 class DispatchControllerTest {
     
-    // ========================================================================
-    // AUTO-CONFIGURED MOCKMVC
-    // ========================================================================
-    
+   
     @Autowired
     private MockMvc mockMvc;
     
     @Autowired
     private ObjectMapper objectMapper;  // For JSON serialization
     
-    // ========================================================================
-    // MOCK SERVICE LAYER
-    // ========================================================================
     
     @MockBean
     private DispatchService dispatchService;
     
-    // ========================================================================
-    // POST /api/dispatch/orders TESTS
-    // ========================================================================
+    
     
     @Test
     @DisplayName("POST /orders - Should return 200 OK with valid request")
     void testAcceptOrdersSuccess() throws Exception {
-        // GIVEN: Valid order request
+       
         OrderRequestDTO request = createValidOrderRequest();
         
-        // GIVEN: Service returns success response
+        
         ApiResponse mockResponse = ApiResponse.success(
             "Successfully saved 2 orders (1 HIGH, 1 MEDIUM, 0 LOW priority)"
         );
         when(dispatchService.saveOrders(any(OrderRequestDTO.class)))
             .thenReturn(mockResponse);
         
-        // WHEN & THEN: POST request should succeed
+       
         mockMvc.perform(post("/dispatch/orders")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(request)))
-            .andDo(print())  // Print request/response for debugging
+            .andDo(print())  
             .andExpect(status().isOk())
             .andExpect(jsonPath("$.success").value(true))
             .andExpect(jsonPath("$.message").value(containsString("Successfully saved")))
             .andExpect(jsonPath("$.message").value(containsString("2 orders")));
 
-        // THEN: Service should be called once
+        
         verify(dispatchService, times(1)).saveOrders(any(OrderRequestDTO.class));
     }
     
     @Test
     @DisplayName("POST /orders - Should return 400 Bad Request for invalid data")
     void testAcceptOrdersWithInvalidData() throws Exception {
-        // GIVEN: Invalid order request (empty orderId, invalid coordinates)
+        
         String invalidJson = """
             {
               "orders": [
@@ -124,7 +100,7 @@ class DispatchControllerTest {
             }
             """;
         
-        // WHEN & THEN: POST request should fail validation
+        
         mockMvc.perform(post("/dispatch/orders")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(invalidJson))
@@ -135,17 +111,17 @@ class DispatchControllerTest {
             .andExpect(jsonPath("$.message").value("Validation failed"))
             .andExpect(jsonPath("$.validationErrors").isMap());
         
-        // THEN: Service should NOT be called (validation fails first)
+        
         verify(dispatchService, never()).saveOrders(any());
     }
     
     @Test
     @DisplayName("POST /orders - Should validate latitude range")
     void testAcceptOrdersWithInvalidLatitude() throws Exception {
-        // GIVEN: Order with latitude out of range
+        
         OrderDTO invalidOrder = OrderDTO.builder()
             .orderId("ORD-001")
-            .latitude(95.0)  // Invalid: exceeds 90
+            .latitude(95.0)  
             .longitude(77.2090)
             .address("Test Address, Delhi, India")
             .packageWeight(5000)
@@ -156,7 +132,7 @@ class DispatchControllerTest {
             .orders(List.of(invalidOrder))
             .build();
         
-        // WHEN & THEN: Should fail validation
+        
         mockMvc.perform(post("/dispatch/orders")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(request)))
@@ -168,7 +144,7 @@ class DispatchControllerTest {
     @Test
     @DisplayName("POST /orders - Should validate priority enum")
     void testAcceptOrdersWithInvalidPriority() throws Exception {
-        // GIVEN: Order with invalid priority
+        
         String invalidJson = """
             {
               "orders": [
@@ -184,7 +160,7 @@ class DispatchControllerTest {
             }
             """;
         
-        // WHEN & THEN: Should fail validation
+        
         mockMvc.perform(post("/dispatch/orders")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(invalidJson))
@@ -193,9 +169,7 @@ class DispatchControllerTest {
                 .value(containsString("Priority must be HIGH, MEDIUM, or LOW")));
     }
     
-    // ========================================================================
-    // POST /api/dispatch/vehicles TESTS
-    // ========================================================================
+ 
     
     @Test
     @DisplayName("POST /vehicles - Should return 200 OK with valid request")
@@ -248,18 +222,15 @@ class DispatchControllerTest {
                 .value(containsString("Capacity must be at least 1000")));
     }
     
-    // ========================================================================
-    // GET /api/dispatch/plan TESTS
-    // ========================================================================
     
     @Test
     @DisplayName("GET /plan - Should return 200 OK with dispatch plan")
     void testGetDispatchPlanSuccess() throws Exception {
-        // GIVEN: Service returns valid dispatch plan
+        
         DispatchPlanResponseDTO mockPlan = createMockDispatchPlan();
         when(dispatchService.getDispatchPlan()).thenReturn(mockPlan);
         
-        // WHEN & THEN: GET request should succeed
+      
         mockMvc.perform(get("/dispatch/plan"))
             .andDo(print())
             .andExpect(status().isOk())
@@ -307,10 +278,7 @@ class DispatchControllerTest {
             .andExpect(jsonPath("$.message").value(containsString("No vehicles available")));
     }
     
-    // ========================================================================
-    // GET /api/dispatch/health TESTS
-    // ========================================================================
-    
+   
     @Test
     @DisplayName("GET /health - Should return 200 OK")
     void testHealthCheck() throws Exception {
@@ -321,9 +289,7 @@ class DispatchControllerTest {
             .andExpect(jsonPath("$.message").value("Dispatch API is running"));
     }
     
-    // ========================================================================
-    // HELPER METHODS
-    // ========================================================================
+  
     
     private OrderRequestDTO createValidOrderRequest() {
         OrderDTO order1 = OrderDTO.builder()

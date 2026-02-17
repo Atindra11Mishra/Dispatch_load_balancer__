@@ -13,63 +13,23 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * GlobalExceptionHandler - Centralized exception handling
+ 
  * 
  * @RestControllerAdvice:
- * - Combines @ControllerAdvice + @ResponseBody
- * - Intercepts exceptions from ALL controllers
- * - Returns JSON responses automatically
- * - Like: Express error middleware but for all controllers
- * 
- * HOW IT WORKS:
- * 1. Exception thrown in controller/service
- *    ↓
- * 2. Spring catches exception
- *    ↓
- * 3. Looks for matching @ExceptionHandler method
- *    ↓
- * 4. Executes handler method
- *    ↓
- * 5. Returns formatted error response
- * 
- * BENEFITS:
- * - DRY: Error handling in one place
- * - Consistent error format across all endpoints
- * - Clean controllers (no try-catch clutter)
- * - Easy to add new exception types
+ 
  */
 @Slf4j
 @RestControllerAdvice
 public class GlobalExceptionHandler {
     
-    // ========================================================================
-    // VALIDATION ERRORS (400 Bad Request)
-    // ========================================================================
+    
     
     /**
-     * Handle validation errors from @Valid annotation
+     
      * 
-     * Triggered when:
-     * - @NotBlank validation fails
-     * - @NotNull validation fails
-     * - @Min/@Max validation fails
-     * - @Pattern validation fails
-     * - etc.
-     * 
-     * EXAMPLE:
-     * Request: { "orderId": "", "latitude": 95.0 }
-     * Response: {
-     *   "status": 400,
-     *   "message": "Validation failed",
-     *   "validationErrors": {
-     *     "orderId": "Order ID is required",
-     *     "latitude": "Latitude must be between -90 and 90 degrees"
-     *   }
-     * }
-     * 
-     * @param ex MethodArgumentNotValidException containing validation errors
-     * @param request WebRequest for extracting request path
-     * @return ResponseEntity with 400 Bad Request and error details
+     * @param ex 
+     * @param request 
+     * @return 
      */
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<ErrorResponse> handleValidationExceptions(
@@ -104,21 +64,8 @@ public class GlobalExceptionHandler {
             .body(errorResponse);
     }
     
-    // ========================================================================
-    // BUSINESS LOGIC EXCEPTIONS (400 Bad Request)
-    // ========================================================================
     
-    /**
-     * Handle NoOrdersException
-     * 
-     * Triggered when: service.getDispatchPlan() called but no orders in database
-     * 
-     * Response: {
-     *   "status": 400,
-     *   "error": "Bad Request",
-     *   "message": "No orders available in the system for dispatch planning"
-     * }
-     */
+   
     @ExceptionHandler(NoOrdersException.class)
     public ResponseEntity<ErrorResponse> handleNoOrdersException(
             NoOrdersException ex,
@@ -138,11 +85,7 @@ public class GlobalExceptionHandler {
             .body(errorResponse);
     }
     
-    /**
-     * Handle NoVehiclesException
-     * 
-     * Triggered when: service.getDispatchPlan() called but no vehicles in database
-     */
+   
     @ExceptionHandler(NoVehiclesException.class)
     public ResponseEntity<ErrorResponse> handleNoVehiclesException(
             NoVehiclesException ex,
@@ -162,11 +105,7 @@ public class GlobalExceptionHandler {
             .body(errorResponse);
     }
     
-    /**
-     * Handle InsufficientCapacityException
-     * 
-     * Triggered when: Total vehicle capacity < total order weight
-     */
+    
     @ExceptionHandler(InsufficientCapacityException.class)
     public ResponseEntity<ErrorResponse> handleInsufficientCapacityException(
             InsufficientCapacityException ex,
@@ -195,11 +134,7 @@ public class GlobalExceptionHandler {
             .body(errorResponse);
     }
     
-    /**
-     * Handle DuplicateOrderException
-     * 
-     * Triggered when: Attempting to save order with existing ID
-     */
+    
     @ExceptionHandler(DuplicateOrderException.class)
     public ResponseEntity<ErrorResponse> handleDuplicateOrderException(
             DuplicateOrderException ex,
@@ -223,11 +158,7 @@ public class GlobalExceptionHandler {
             .body(errorResponse);
     }
     
-    /**
-     * Handle DuplicateVehicleException
-     * 
-     * Triggered when: Attempting to save vehicle with existing ID
-     */
+    
     @ExceptionHandler(DuplicateVehicleException.class)
     public ResponseEntity<ErrorResponse> handleDuplicateVehicleException(
             DuplicateVehicleException ex,
@@ -251,11 +182,7 @@ public class GlobalExceptionHandler {
             .body(errorResponse);
     }
     
-    /**
-     * Handle IllegalArgumentException
-     * 
-     * Triggered when: Invalid arguments passed to methods
-     */
+    
     @ExceptionHandler(IllegalArgumentException.class)
     public ResponseEntity<ErrorResponse> handleIllegalArgumentException(
             IllegalArgumentException ex,
@@ -275,16 +202,9 @@ public class GlobalExceptionHandler {
             .body(errorResponse);
     }
     
-    // ========================================================================
-    // GENERIC EXCEPTIONS (500 Internal Server Error)
-    // ========================================================================
-    
+   
     /**
-     * Handle all other uncaught exceptions
-     * 
-     * FALLBACK handler - catches anything not handled above
-     * 
-     * IMPORTANT: In production, do NOT expose stack traces or internal details
+    
      * 
      * @param ex Any unhandled exception
      * @param request WebRequest
@@ -311,7 +231,7 @@ public class GlobalExceptionHandler {
             "Internal Server Error",
             clientMessage,
             extractPath(request),
-            details  // Set to null in production
+            details  
         );
         
         return ResponseEntity
@@ -319,15 +239,12 @@ public class GlobalExceptionHandler {
             .body(errorResponse);
     }
     
-    // ========================================================================
-    // HELPER METHODS
-    // ========================================================================
-    
+   
     /**
-     * Extract request path from WebRequest
+    
      * 
-     * @param request WebRequest object
-     * @return Request path (e.g., "/api/dispatch/orders")
+     * @param request 
+     * @return 
      */
     private String extractPath(WebRequest request) {
         return request.getDescription(false).replace("uri=", "");

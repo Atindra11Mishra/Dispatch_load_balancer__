@@ -1,9 +1,6 @@
 package com.freightfox.dispatch.exception;
 
-/**
- * DuplicateVehicleException - Thrown when attempting to save a vehicle 
- * with an ID that already exists
- */
+
 public class DuplicateVehicleException extends RuntimeException {
     
     private final String vehicleId;

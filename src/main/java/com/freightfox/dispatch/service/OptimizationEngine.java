@@ -12,31 +12,17 @@ import org.springframework.stereotype.Service;
 import java.util.*;
 import java.util.stream.Collectors;
 
-/**
- * OptimizationEngine - Core dispatch optimization algorithm
- * 
- * ALGORITHM: Priority-based Greedy Assignment with Distance Minimization
- * 
- * Goal: Assign orders to vehicles such that:
- * 1. High-priority orders are processed first
- * 2. Each vehicle stays within capacity
- * 3. Total distance is minimized (nearest vehicle preference)
- * 
- * Complexity: O(N × M) where N = orders, M = vehicles
- * - Sorting: O(N log N)
- * - Distance matrix: O(N × M)
- * - Assignment: O(N × M) worst case
- */
+
 @Slf4j
 @Service
 public class OptimizationEngine {
     
     /**
-     * Main optimization method - assigns orders to vehicles
      * 
-     * @param orders List of delivery orders to assign
-     * @param vehicles List of available vehicles
-     * @return DispatchPlanResponseDTO with optimized assignments
+     * 
+     * @param orders
+     * @param vehicles
+     * @return
      */
     public DispatchPlanResponseDTO optimizeDispatch(
             List<DeliveryOrder> orders, 
@@ -56,28 +42,28 @@ public class OptimizationEngine {
             return buildEmptyPlan("No vehicles available");
         }
         
-        // STEP 1: Sort orders by priority, then by weight (descending)
+        
         List<DeliveryOrder> sortedOrders = sortOrdersByPriority(orders);
         log.info("Orders sorted: {} HIGH, {} MEDIUM, {} LOW priority",
             countByPriority(sortedOrders, Priority.HIGH),
             countByPriority(sortedOrders, Priority.MEDIUM),
             countByPriority(sortedOrders, Priority.LOW));
         
-        // STEP 2: Initialize vehicle states (tracks current load per vehicle)
+        
         Map<String, VehicleState> vehicleStates = initializeVehicleStates(vehicles);
         
-        // STEP 3: Build distance matrix (pre-compute all vehicle-to-order distances)
+        
         Map<String, Double> distanceMatrix = buildDistanceMatrix(vehicles, sortedOrders);
         log.info("Distance matrix built: {} entries cached", distanceMatrix.size());
         
-        // STEP 4: Assign orders to vehicles using greedy algorithm
+        
         Map<String, List<AssignmentRecord>> assignments = assignOrders(
             sortedOrders, 
             vehicleStates, 
             distanceMatrix
         );
         
-        // STEP 5: Build response DTO
+        
         DispatchPlanResponseDTO response = buildDispatchPlan(
             assignments, 
             vehicleStates, 
@@ -92,15 +78,7 @@ public class OptimizationEngine {
         return response;
     }
     
-    /**
-     * STEP 1: Sort orders by priority (HIGH → MEDIUM → LOW), then by weight
-     * 
-     * Sorting logic:
-     * - Primary: Priority (HIGH=3, MEDIUM=2, LOW=1) descending
-     * - Secondary: Weight (heavier first) descending
-     * 
-     * Why heavier first? Harder to place heavy orders later when vehicles fill up
-     */
+    
     private List<DeliveryOrder> sortOrdersByPriority(List<DeliveryOrder> orders) {
         return orders.stream()
             .sorted(Comparator
@@ -112,15 +90,7 @@ public class OptimizationEngine {
             .collect(Collectors.toList());
     }
     
-    /**
-     * STEP 2: Initialize vehicle states
-     * 
-     * VehicleState tracks:
-     * - Current load (starts at 0)
-     * - Remaining capacity
-     * - Total distance traveled
-     * - Assigned orders
-     */
+   
     private Map<String, VehicleState> initializeVehicleStates(List<Vehicle> vehicles) {
         Map<String, VehicleState> states = new HashMap<>();
         
@@ -133,20 +103,7 @@ public class OptimizationEngine {
         return states;
     }
     
-    /**
-     * STEP 3: Build distance matrix (CRITICAL FOR PERFORMANCE)
-     * 
-     * Pre-computes ALL vehicle-to-order distances
-     * Key format: "vehicleId:orderId"
-     * 
-     * Why cache?
-     * - Haversine is computationally expensive (trigonometric functions)
-     * - Without caching: O(N × M × iterations) recalculations
-     * - With caching: O(N × M) one-time computation
-     * 
-     * Memory cost: N × M × 8 bytes (double)
-     * Example: 100 orders × 10 vehicles = 1,000 doubles = ~8 KB
-     */
+    
     private Map<String, Double> buildDistanceMatrix(
             List<Vehicle> vehicles, 
             List<DeliveryOrder> orders) {
@@ -173,18 +130,7 @@ public class OptimizationEngine {
         return distanceMatrix;
     }
     
-    /**
-     * STEP 4: Assign orders to vehicles (GREEDY ALGORITHM)
-     * 
-     * For each order (in priority order):
-     * 1. Find eligible vehicles (capacity >= order weight)
-     * 2. Calculate score for each eligible vehicle
-     * 3. Assign to vehicle with best score (lowest distance)
-     * 4. Update vehicle state (load, distance)
-     * 
-     * Score = distance (lower is better)
-     * Future enhancement: score = α × distance + β × utilization
-     */
+   
     private Map<String, List<AssignmentRecord>> assignOrders(
             List<DeliveryOrder> sortedOrders,
             Map<String, VehicleState> vehicleStates,
@@ -256,12 +202,7 @@ public class OptimizationEngine {
     }
     
     /**
-     * Find best vehicle for an order
-     * 
-     * Selection criteria:
-     * 1. Vehicle must have capacity >= order weight
-     * 2. Among eligible vehicles, choose nearest one
-     * 
+     
      * @return VehicleAssignment with vehicleId and distance, or null if no vehicle available
      */
     private VehicleAssignment findBestVehicle(
@@ -294,9 +235,7 @@ public class OptimizationEngine {
         return best;
     }
     
-    /**
-     * STEP 5: Build final dispatch plan response
-     */
+    
     private DispatchPlanResponseDTO buildDispatchPlan(
             Map<String, List<AssignmentRecord>> assignments,
             Map<String, VehicleState> vehicleStates,
@@ -396,36 +335,18 @@ public class OptimizationEngine {
             .build();
     }
     
-    // ========================================================================
-    // HELPER METHODS
-    // ========================================================================
     
-    /**
-     * Build composite key for distance matrix
-     * Format: "vehicleId:orderId"
-     */
     private String buildDistanceKey(String vehicleId, String orderId) {
         return vehicleId + ":" + orderId;
     }
     
-    /**
-     * Count orders by priority
-     */
+   
     private long countByPriority(List<DeliveryOrder> orders, Priority priority) {
         return orders.stream()
             .filter(o -> o.getPriority() == priority)
             .count();
     }
     
-    // ========================================================================
-    // INNER CLASSES (Data Structures)
-    // ========================================================================
-    
-    /**
-     * VehicleState - Tracks current state of a vehicle during assignment
-     * 
-     * Mutable state object (updated as orders are assigned)
-     */
     @Data
     private static class VehicleState {
         private final Vehicle vehicle;
@@ -446,18 +367,14 @@ public class OptimizationEngine {
         }
     }
     
-    /**
-     * AssignmentRecord - Records an order-to-vehicle assignment
-     */
+    
     @Data
     private static class AssignmentRecord {
         private final DeliveryOrder order;
         private final double distance;
     }
     
-    /**
-     * VehicleAssignment - Candidate vehicle for an order
-     */
+    
     @Data
     private static class VehicleAssignment {
         private final String vehicleId;

@@ -5,9 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-/**
- * PlanSummaryDTO - Aggregate statistics about the plan
- */
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -19,6 +17,6 @@ public class PlanSummaryDTO {
     private Integer unassignedOrders;
     private Integer totalVehicles;
     private Integer usedVehicles;
-    private String totalDistanceCovered;  // e.g., "125.5 km"
-    private Double averageUtilization;    // e.g., 78.5 (means 78.5%)
+    private String totalDistanceCovered;  
+    private Double averageUtilization;    
 }

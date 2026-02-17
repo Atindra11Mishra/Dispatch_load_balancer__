@@ -5,7 +5,7 @@
          https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     
-    <!-- Parent starter - like a preset configuration package -->
+    
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -13,7 +13,7 @@
         <relativePath/>
     </parent>
     
-    <!-- Your project identity (like package.json name/version) -->
+    
     <groupId>com.freightfox</groupId>
     <artifactId>dispatch-load-balancer</artifactId>
     <version>1.0.0</version>
@@ -28,68 +28,46 @@
     </properties>
     
     <dependencies>
-        <!-- 1. SPRING BOOT WEB STARTER
-             Like Express.js - provides REST API capabilities
-             Includes: Tomcat server, Spring MVC, Jackson for JSON
-        -->
+        
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         
-        <!-- 2. SPRING DATA JPA
-             Like Mongoose for MongoDB - ORM for PostgreSQL
-             Maps Java objects to database tables automatically
-             Provides repository pattern (like Mongoose models)
-        -->
+        
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
         
-        <!-- 3. POSTGRESQL DRIVER
-             Like 'pg' package in Node.js
-             Enables connection to PostgreSQL database
-        -->
+        
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <scope>runtime</scope>
         </dependency>
         
-        <!-- 4. SPRING BOOT VALIDATION
-             Like express-validator or Joi
-             Provides @NotNull, @Min, @Max annotations
-        -->
+        
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-validation</artifactId>
         </dependency>
         
-        <!-- 5. LOMBOK (DEVELOPER TOOL)
-             Reduces boilerplate code with annotations
-             @Getter, @Setter, @Builder etc.
-             Like auto-generating getters/setters
-        -->
+        
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
         
-        <!-- 6. SPRINGDOC OPENAPI (API DOCUMENTATION)
-             Like Swagger in Express
-             Auto-generates API docs at /swagger-ui.html
-        -->
+        
         <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
             <version>2.6.0</version>
         </dependency>
         
-        <!-- 7. SPRING BOOT DEVTOOLS (OPTIONAL)
-             Like nodemon - auto-restarts on code changes
-        -->
+        
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
@@ -97,22 +75,14 @@
             <optional>true</optional>
         </dependency>
         
-        <!-- === TESTING DEPENDENCIES === -->
         
-        <!-- 8. SPRING BOOT TEST STARTER
-             Includes JUnit 5, Mockito, AssertJ
-             Like Jest + Supertest combined
-        -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
         
-        <!-- 9. H2 DATABASE (FOR TESTING)
-             In-memory database for unit tests
-             Like using sqlite :memory: in tests
-        -->
+        
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
@@ -122,7 +92,7 @@
     
     <build>
         <plugins>
-            <!-- JaCoCo - Code coverage reporting -->
+            
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
@@ -143,7 +113,7 @@
                 </executions>
             </plugin>
 
-            <!-- Maven plugin to package as executable JAR -->
+            
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>

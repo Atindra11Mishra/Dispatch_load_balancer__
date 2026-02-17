@@ -10,11 +10,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDateTime;
 
-/**
- * Vehicle Entity - Represents vehicles table in PostgreSQL
- * 
- * Stores delivery vehicle fleet information
- */
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -28,8 +24,7 @@ public class Vehicle {
     private String vehicleId;
 
     @Column(name = "capacity", nullable = false)
-    // Maximum weight capacity in same unit as packageWeight
-    // Add validation: must be > 0
+   
     private Integer capacity;
 
     // === CURRENT LOCATION ===
@@ -66,19 +61,18 @@ public class Vehicle {
     // === CUSTOM BUSINESS METHODS ===
     
     /**
-     * Check if vehicle can accommodate a specific weight
-     * @param weight Weight to check against capacity
-     * @return true if vehicle has sufficient capacity
+     
+     * @param weight 
+     * @return 
      */
     public boolean canAccommodate(Integer weight) {
         return this.capacity >= weight;
     }
 
     /**
-     * Get available capacity after accounting for current load
-     * (You'll track currentLoad in service layer)
-     * @param currentLoad Current weight already assigned
-     * @return Remaining capacity
+     
+     * @param currentLoad 
+     * @return 
      */
     public Integer getRemainingCapacity(Integer currentLoad) {
         return this.capacity - currentLoad;

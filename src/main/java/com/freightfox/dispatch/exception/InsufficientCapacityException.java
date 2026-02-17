@@ -1,9 +1,5 @@
 package com.freightfox.dispatch.exception;
 
-/**
- * InsufficientCapacityException - Thrown when total vehicle capacity 
- * cannot accommodate all orders
- */
 public class InsufficientCapacityException extends RuntimeException {
     
     private final Integer totalOrderWeight;
